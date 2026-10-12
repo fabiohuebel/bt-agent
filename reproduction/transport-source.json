@@ -1,0 +1,18 @@
+{
+  "reference_commit": "62056af6fcb9ac3ec611760415c0c4f2f91a1fb6",
+  "files": [
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/image_rotation.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_image_rotation.py",
+      "source_sha256": "4d7b0221b31b3a373a20dc18c0e7d4d57753013e07118f753eb65f179267334a",
+      "sha256": "4d7b0221b31b3a373a20dc18c0e7d4d57753013e07118f753eb65f179267334a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/ros_local_planner.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/ros_navigation.py",
+      "source_sha256": "f0e8c87fdeaf6c3b86a8eb319f98937cbb8e26c1de69de5eda4ad2f343eafbd6",
+      "sha256": "3c47a00f0fc8e6af4213d3613ae2c42d7d48ef5cb6f9cc53e707f3d0078d4abf"
+    }
+  ],
+  "transformation": "ROS navigation interface import only; camera codec byte-identical"
+}

@@ -1,0 +1,597 @@
+{
+  "schema": "bt-agent-release-patches/v1",
+  "patches": [
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/event_sink.py",
+      "base_sha256": "4848e3bb1e45a8fe3259fb7681f4ac0e67615391093714906137a3ac6aba177d",
+      "release_sha256": "ebc0b89c6b4bebffaa96fb81d1de1571a7d777f01f61f7ac5e4b9bdecf672a04",
+      "reason": "Replace legacy broker with maintained bt_agent.tracing: drain accepted callbacks on shutdown, explicit retryable timeout and delivery statistics.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_trace_shutdown.py; original identity test no longer xfailed; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/backend.py",
+      "base_sha256": "eb55fe3da93f5dd0bdf05405229a0c23bbdd6058a79bbcd24619357a6c1a3c05",
+      "release_sha256": "0848b17828305b325cdf166d5f26067cae3653b57aaa33947b223644d4af0aed",
+      "reason": "Dispatch legacy model diagnostics through overridable hooks. Private reference behavior remains; public ChatModel disables implicit environment/conversation dumps and sanitizes transport errors. Requests, responses and parsing are unchanged. A code comment that named two challenge tasks and an evaluation score is reworded; the logged message is unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_public_model_privacy.py; tests/reference/model; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/claude_headless.py",
+      "base_sha256": "1e196eeb46cf8514768bfe11fad726f13c7ee1c8905ace991314a5996bcdab6e",
+      "release_sha256": null,
+      "reason": "Remove the workstation-specific Claude CLI provider. It checked a local account login and config directory, and nothing in the release imports it; its tests were already deferred.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/baselines/__init__.py",
+      "base_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_sha256": null,
+      "reason": "Remove the pure-ReAct ablation baseline, DecisionMakerAgent, ExternalAgent and the empty ALFWorld skills package; nothing in the release imports them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/baselines/react_agent.py",
+      "base_sha256": "5d23b791b3db93772c8cb13bc1db7a4cbd3b55f5cc2cc3f0c00752339342a5d9",
+      "release_sha256": null,
+      "reason": "Remove the pure-ReAct ablation baseline, DecisionMakerAgent, ExternalAgent and the empty ALFWorld skills package; nothing in the release imports them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/config.py",
+      "base_sha256": "32502dfb92cd9129bfbd638bd609dac89a2ac62ffb4300642293f044790494a9",
+      "release_sha256": "f4c92fcbd116cc8792825ede2bcdb91f2c1ce04e5af3fb3f8eab0e8ecde665b5",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/decision_maker_agent.py",
+      "base_sha256": "713b0acff47a0df33dcfdf5107e89eda0eb1feb1ca8d60eff2f328a487ae724e",
+      "release_sha256": null,
+      "reason": "Remove the pure-ReAct ablation baseline, DecisionMakerAgent, ExternalAgent and the empty ALFWorld skills package; nothing in the release imports them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/external_agent.py",
+      "base_sha256": "e11b5ce0f0bd027980ddbec590afd0a2f52e238caaf9b37cc0bbbff812b5951d",
+      "release_sha256": null,
+      "reason": "Remove the pure-ReAct ablation baseline, DecisionMakerAgent, ExternalAgent and the empty ALFWorld skills package; nothing in the release imports them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/__init__.py",
+      "base_sha256": "8ff76d2f8df013429adc787bcda88836e3862169b5fff04f06d5e7ac080e1aff",
+      "release_sha256": "fb5e298c285ff0ba2228f15675f1eb905b51e3e47e6c3d912180f7a62c8b7a62",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/actor.py",
+      "base_sha256": "316b0da71bdc45b64cb3d184397aadc1b8844b1ca7295d31ba6bac1867c896a6",
+      "release_sha256": "27884080000cefd48233eca3193a73180c08b07bb40192ed5513f119884b2455",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/evaluator.py",
+      "base_sha256": "00fd09cc8efa785e310cf886c328d7565b5db917320e828edd8767709ce9f7ed",
+      "release_sha256": "6b2ddd98ee00efff0a7f107eabdb8d60cdfe037889887d253082a88a624e8d53",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged. A comment now points to the released prompt module instead of the removed baseline files.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/planner.py",
+      "base_sha256": "21c5184b815566e3a95cfeec23c209389f0b909d699ee7d7d263e44ef0dcfac1",
+      "release_sha256": "c998185715ee3ba3611a450e66e9dfeffaf7ee10d857eb23dc0b7f2d6928e837",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/__init__.py",
+      "base_sha256": "319a95432fc8f09e4a3ca2fba7752b7473cc933267d8f10c4d3881128c167b78",
+      "release_sha256": "06d71a76eb113435b27067a24a79a5d2ecb7339d160baa34f12e963b36fdf207",
+      "reason": "Default get_prompts() to the released variant and drop the per-field baseline fill. The flattened tiamat_agent_submit_v5 bundle now carries the three sub-prompts it used to receive from baseline, so the fill is no longer needed.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/__init__.py",
+      "base_sha256": "03b00bfba7d5a887542dc4904a82ae90ee929e2d170b48861c3f3bd9d4bcd2b1",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/actor.py",
+      "base_sha256": "68046c256e76e595c3375925c3483a9ebfb39afc497bdfecfcbf52cb2cf11090",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/actor_compaction.py",
+      "base_sha256": "e8476d7017f1843b6587df6f77905ceedb4532a03d204c8f5e5ac81c8d205dd2",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator.py",
+      "base_sha256": "795c2b13f4d6ffaf7db77e8bb9af1679ba6bde9c7595dd92000e8c7afc148e60",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator_claim.py",
+      "base_sha256": "fe7ba9c3ec889f3c114845413f7e01ec53b790bafa6f12b149673960f97a371a",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator_user.py",
+      "base_sha256": "4c5d444ace6a7435446ff38a75a32adaf216fb848a4945ef203925c8f049b9e8",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/planner.py",
+      "base_sha256": "b805d6f3da4349112e8d91c4616b3ba4d353e44d361714efbb7d224c1158cd28",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v1/__init__.py",
+      "base_sha256": "8c0b325ce3ac7b66d92d2ebfe2eec386eb5bfc3bddb56c51c7512bbc4b0a2bcf",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v1/planner.py",
+      "base_sha256": "263a9cd76471ea188b55e98b75e79fdc6461678f8b9ebf0e69e9405665e60f41",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v2/__init__.py",
+      "base_sha256": "352b581638f6007d52136c13c048bdfda1f1c7c9e784a4342e90bb5a5aaed8cd",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v2/planner.py",
+      "base_sha256": "a4fcb2f9dc48088df566ef8b6fee6a64fd8c775837069ee9a7c77dddaadfbd12",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v3/__init__.py",
+      "base_sha256": "120850956c6cacb20263b9d72d4a2d43f9c0b2d4249e7a559e858daaa91ed3a3",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v3/planner.py",
+      "base_sha256": "423bfa17e9313ec18848f1933618490cbc32e2b2d892a6f62427878f363c9470",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v4/__init__.py",
+      "base_sha256": "657af91bfb0b6df7baa1ef41ab491c3032978e2d249abe6c54e65a00c6445afc",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v4/planner.py",
+      "base_sha256": "40569cdb0330115b3105975744335a48c89716fffe2b6596fac8b986454bcf67",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v5/__init__.py",
+      "base_sha256": "c07493bc2afc272f07ff3ace555ff70d297cee2fddcbf5074362533d56db1519",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v5/planner.py",
+      "base_sha256": "8a6867134e8c11d412604e08f35da18357eee6166eea9e0e072fa42790f4e52e",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/__init__.py",
+      "base_sha256": "bafe22d260106eeea454d46d13a72d35e9bdbf5cce7ae2b2490b8b9847e0dc58",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/evaluator.py",
+      "base_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/planner.py",
+      "base_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/__init__.py",
+      "base_sha256": "3e99f0602029a6c18fa9327491c867dab4fb9bdcbc70d3cf9afabd392f6b46b7",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/actor.py",
+      "base_sha256": "4eb34d1dd9f0e82e28c8d9485bdc91b9d5568b1ec90b44ecf7517a18757d45e3",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/evaluator.py",
+      "base_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/planner.py",
+      "base_sha256": "4036de00363d1f2da4be70bcab4aca2cd1433c9f70c6d73c4780ec54b66cf934",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/__init__.py",
+      "base_sha256": "6f95702377f6ac9eeb24c4e38bcc489c849e7c573747435b4c37b2176781b41b",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/actor.py",
+      "base_sha256": "d8c9f1d2921741e59e49c98ae35e4507b2801bb60cc0829917ae1dbd10075172",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/evaluator.py",
+      "base_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/planner.py",
+      "base_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/__init__.py",
+      "base_sha256": "edee51feeac76468820f47b7bcf6716ac53e6a2ac3b555de2e18a7cd967e45ba",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/evaluator.py",
+      "base_sha256": "39b48c5f3e67625f08e0d671497e0f3bfcd279d632a9b357005c1f4a6fd0a109",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/planner.py",
+      "base_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_structural/__init__.py",
+      "base_sha256": "c560be6c0037fcc9943caadc89ad882918514b0c3e85ef9d93599491952a82e2",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_structural/actor.py",
+      "base_sha256": "9fbb28e34f57f5001b0e9e7485946c72a98e8e435dd31978584fdd085fb7a8b5",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/__init__.py",
+      "base_sha256": "a5aa7c65ea872e10311f404c7d6e19e7e87df85b276c1f1500fdf2253b076d9f",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/actor.py",
+      "base_sha256": "86c6ab72f746b5aefc13a0bcf3c9990d24a580ac5eeaaae42daac9a411fad300",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/planner.py",
+      "base_sha256": "45889c28e2bc1ed6817f0783f2a43314424e74e78f3d76e8518408ce1ffed34e",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v2/__init__.py",
+      "base_sha256": "685569df91a200679cc48315b97e1fccd1f8d608136b37eda1c62522938690bc",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v3/__init__.py",
+      "base_sha256": "0add0e4fdc9b0b5fd4f672253ec2bea0d684f8aea2e9ac893ef91ac758ef33d1",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v4/__init__.py",
+      "base_sha256": "c5dd415ee34afd04ca431acef9a0083b8ee351e0958ab71fb570f2a6fa315061",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v4/actor.py",
+      "base_sha256": "71e80f8645124444028cffb08e1038c89962637ddfcc1fda5cb8bba477637f41",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that the released tiamat_agent_submit_v5 bundle was assembled from; the flattened bundle no longer imports it.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v5/__init__.py",
+      "base_sha256": "12367e13a5d2eaf20cd7a708fe92b202babe8058fefe86549155e196e538fb7e",
+      "release_sha256": "ea549efc944c969a4359f34a50e5ce5dcc4cef2330c61961fe6dfcdee443d41c",
+      "reason": "Flatten the released bundle into literal strings. The frozen source assembled it by importing fields through older development variants and filling three sub-prompts from baseline; every string, including those three, is byte-identical to that assembled bundle.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/__init__.py",
+      "base_sha256": "c98b36bc5fbd9d63e5ff3c68ed5c4046fc67afd04260bd2657dc100e61f509ca",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/actor.py",
+      "base_sha256": "a7c5bf3448887419df45231d62245451a15743c1c93d15d2b54a8e277ddcac7d",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/evaluator.py",
+      "base_sha256": "5715e908f238fece6b70dab6b60ca753f9358ff4202ed8ac1c88eee494da8de7",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/planner.py",
+      "base_sha256": "f149b47a137558edecd6e846e4b422310ef14f3c6b7045305d511e9bd0722762",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_no_leaf_protocol/__init__.py",
+      "base_sha256": "ba0d5dc7e9a8f7678085020c2f086d3e55c8ff701cd9973d8e1e1b17447f1561",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_no_reflexion/__init__.py",
+      "base_sha256": "abc75f2e9784613585c4ec043662c9a863057c34e7f7d0cc1c1bd3781c8978ba",
+      "release_sha256": null,
+      "reason": "Remove a development prompt variant that no released profile or module uses.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/evaluate_completion.py",
+      "base_sha256": "f706363a7224867e13d498ef0cfe4fb052ec3f5767c1bea979876e831fe527a4",
+      "release_sha256": "31eb31494d5ceef92dd80562031c0fc85690e0d614a6068d436838f7f6013a99",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/plan_task.py",
+      "base_sha256": "7eaab9d74abe93bdcc6848f9faeb1a6941f558f9467c6b73ae31df347a34d0ff",
+      "release_sha256": "4fd811894e4f1fadd3d2e22f4e1588c518c6d616f672a507d56d19c7fbadeeaf",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/select_skill.py",
+      "base_sha256": "2b58093990a9c27adf8511258eb522c773477ab8f42d98bfa45efed9af5a392b",
+      "release_sha256": "1b57e49600d11e035dc4a214e0fae86e5b2c279fbc237358907241748e411e33",
+      "reason": "Default prompt_variant to the released variant instead of a removed one. Both released profiles set it explicitly, so requests are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_released_prompts.py; tests/test_package_boundary.py; scripts/check_reference_parity.py; scripts/check_task_state_parity.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/alfworld_skills/__init__.py",
+      "base_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_sha256": null,
+      "reason": "Remove the pure-ReAct ablation baseline, DecisionMakerAgent, ExternalAgent and the empty ALFWorld skills package; nothing in the release imports them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_ablation_switches.py",
+      "base_sha256": "cecb34541e841467e9498f060b7bea63ad5d77ba634210b3a2d94f016b45ef2d",
+      "release_sha256": "c7b1834cd454afe296e709446f2a164a58185915e77c4ee1645c32b702bfc85c",
+      "reason": "Retarget the test at the released variant.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_ablation_switches.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_actor_budget_disclosure.py",
+      "base_sha256": "a5fb5b27532da5a335eef5281e893b43288cceae3d564be1d2fdd700a0314f27",
+      "release_sha256": "f84ca927c70a358084a3de6b0cb298a06b07045a953bfaa7b6eeaccda1445eeb",
+      "reason": "Retarget the test at the released variant and drop test_v1_v2_v3_ignore_action_budget_harmlessly and test_variant_without_placeholder_ignores_action_budget, which only covered removed variants without the budget placeholder.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_actor_budget_disclosure.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_evaluator_user_interaction_type.py",
+      "base_sha256": "bb86ac486a0524cd2bf89cf9e084ed18c1bd57dc1a7cf7d3610331feccc1b579",
+      "release_sha256": "5064d897f455d9430b806e8f4f4a326437b4469494dd009a2335ed184a432029",
+      "reason": "Retarget the test at the released variant.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_evaluator_user_interaction_type.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_p7_evaluator_substrate_wording.py",
+      "base_sha256": "0b5f990760f614a73f7eb5d8e4ee012f736254c35d8c2a699921ddb3d21718d0",
+      "release_sha256": "7351b013aafd3ae97c3be7620226af7974ed457a8e683e6b883d28a227a2c82b",
+      "reason": "Retarget the test at the released variant, whose evaluator is the former textrung_p7_leniency evaluator, and update the docstring accordingly.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_p7_evaluator_substrate_wording.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_select_skill_budget_disclosure.py",
+      "base_sha256": "5255c49646ae760d5572f4dd0345b08c8405f905427837b06786fdae384f23ea",
+      "release_sha256": "ddec60148d70bf30ee7ba1bdee11050862548fc12e4169882b9d39178b30793f",
+      "reason": "Retarget the test at the released variant.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_select_skill_budget_disclosure.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_structural_cp1.py",
+      "base_sha256": "c65af7eb54c81462f05c91c565caedf7bbb50fcb7d0fd4e21a2545602fa63ec8",
+      "release_sha256": "13a4d2f13da512f7001786e23f51596b03a575e7a435752c23f999785a12c80a",
+      "reason": "Retarget the test at the released variant.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_structural_cp1.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_system_prompts.py",
+      "base_sha256": "03b3e167b89b1887120bad7167156e46d44a3f830a5372c8610611e456baa7e1",
+      "release_sha256": "7d0d4e1826be53fbbb2dde03018d68eade98d3c1f5b05713b44cf3bc892687c5",
+      "reason": "Rewrite the registry tests for the single released variant; content tests for removed variants are removed with them.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_system_prompts.py; tests/test_released_prompts.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_three_way_verdict.py",
+      "base_sha256": "1ee03b3bc405774487419dc671bb311e14181bba93986f8f5b4df2e95fb6cf58",
+      "release_sha256": "d15450b760c31a5dee600b4ba6681d15e2ea72338f00a13e0ae3866df228238b",
+      "reason": "Retarget the test at the released variant.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_three_way_verdict.py"
+    },
+    {
+      "destination": "tests/reference/agent/test_structural_cp2.py",
+      "base_sha256": "a6664dd83f3908ab13b48b15b445e4a87cf2b4a89c453168216d205bdfd0c5d9",
+      "release_sha256": "d3afd616041477432eb5fcf6b19f4c70e7b03a388352de97ea55cee40495bfcf",
+      "reason": "Replace a task phrase from the externally supplied challenge suite with a neutral fixture task; the test only checks that the task text becomes the fallback milestone description.",
+      "policy_prompts_changed": false,
+      "tests": "tests/reference/agent/test_structural_cp2.py"
+    },
+    {
+      "destination": "packages/bt-agent/src/bt_agent/_engine/report_skill.py",
+      "base_sha256": "1e3c250755f37778d9826dce91f2f0e7ce5496f96976bf0e8c8c73080a6d2ba9",
+      "release_sha256": "7b62690ef224bbe9ccebc9f693f133b5f3e9c1340a1a28e7e0c9b50702214131",
+      "reason": "Replace a module-docstring example that paraphrased a task from the externally supplied challenge suite with a neutral one. The skill's name, description, parameters and behavior are unchanged.",
+      "policy_prompts_changed": false,
+      "tests": "tests/test_package_boundary.py; scripts/check_reference_parity.py"
+    }
+  ]
+}

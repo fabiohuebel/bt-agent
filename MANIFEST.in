@@ -1,0 +1,11 @@
+include LICENSE LICENSE-SCOPE.md NOTICE.md
+graft docs
+graft examples
+graft reproduction
+graft scripts
+graft tests
+prune artifacts
+prune .build
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

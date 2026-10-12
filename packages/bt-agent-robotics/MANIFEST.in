@@ -1,0 +1,7 @@
+include LICENSE LICENSE-SCOPE.md NOTICE.md
+graft tests
+prune artifacts
+prune .build
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

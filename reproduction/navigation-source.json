@@ -1,0 +1,8 @@
+{
+  "commit": "62056af6fcb9ac3ec611760415c0c4f2f91a1fb6",
+  "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/utils/nav_graph_planner.py",
+  "source_sha256": "f6b00604f9ee3336b1a89314b8ddddbcc6bd322b1c64781526853597d2971668",
+  "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_nav_graph_planner.py",
+  "extracted_sha256": "660b84ca52ab9b2d99e152974772fd8dd339754f34faf7bbb791ae2efc48e159",
+  "transformation": "Import namespace only; all planner behavior retained"
+}

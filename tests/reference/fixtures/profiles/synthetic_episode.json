@@ -1,0 +1,47 @@
+{
+  "fixture_kind": "synthetic",
+  "episode_id": "profiles-v1-mixed-outcomes",
+  "registered_skills": ["query", "navigate", "capture"],
+  "steps": [
+    {
+      "skill": "query",
+      "params": {"query": "red mug"},
+      "reasoning": "Find the target first.",
+      "status": "SUCCEEDED",
+      "observation": "Found red mug at node 7.",
+      "result_data": {"object_id": 7},
+      "events": [{"kind": "skill_completed", "outcome": "success"}],
+      "safety_log": []
+    },
+    {
+      "skill": "navigate",
+      "params": {"object_id": 7},
+      "reasoning": "Move to the mug.",
+      "status": "FAILED",
+      "observation": "[leaf=FollowPath] Navigation blocked. Try another route.",
+      "result_data": {"arrival_status": "failed_blocked", "failure_reason": "no_progress"},
+      "events": [{"kind": "skill_completed", "outcome": "failed", "leaf": "FollowPath"}],
+      "safety_log": [{"clause": "clearance", "outcome": "pass"}]
+    },
+    {
+      "skill": "hallucinated_tool",
+      "params": {},
+      "reasoning": "Attempt an unavailable action.",
+      "status": "FAILED",
+      "observation": "Unknown skill: hallucinated_tool",
+      "result_data": {},
+      "events": [{"kind": "parser_error", "outcome": "failed"}],
+      "safety_log": []
+    },
+    {
+      "skill": "capture",
+      "params": {"camera": "frontleft", "label": "red mug"},
+      "reasoning": "Record the target.",
+      "status": "SUCCEEDED",
+      "observation": "Captured red mug from frontleft.",
+      "result_data": {"capture_id": "cap-1"},
+      "events": [{"kind": "skill_completed", "outcome": "success"}],
+      "safety_log": []
+    }
+  ]
+}

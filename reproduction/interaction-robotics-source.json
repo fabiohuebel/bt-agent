@@ -1,0 +1,125 @@
+{
+  "schema": "interaction-robotics-source/v1",
+  "agent_commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+  "world_commit": "5321e348c2a49a3dd7017726ea9240738b929e01",
+  "transformations": [
+    "Namespace relocation",
+    "Unused simulator import removed from controller",
+    "Standalone geometric transform and alignment closures",
+    "Three flat-baseline parser/dispatch tests omitted; resume fixture inlined from frozen world test"
+  ],
+  "files": [
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/query.py",
+      "destination": "_interaction_query.py",
+      "source_sha256": "4e1d871aed4c5c8d08c019316ff67c008c746b23c4b8724664b21948eaad1361",
+      "sha256": "ad3ebdb877a058c7620217dc39840ed5e8ebb6e72f3f42d7e72533900b2b4de8"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/push.py",
+      "destination": "_push/skill.py",
+      "source_sha256": "a8bd48d4175eacf2e7846623b7367f243eb95564c461b31954e319f4d0849bc8",
+      "sha256": "2f3bef338714bb909aa2bd610bbfd0b2b328d5d7a6226c3c968b6bbe69cbc034"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/navigate.py",
+      "destination": "_push/navigation.py",
+      "source_sha256": "b93d2020cb78aabd78dba2530999647a1ebf15d646d4e679de99583188da8138",
+      "sha256": "c28dce78c289826fd84eee66eed1f40f88762ba7779d86c5b872688eb86b31ec"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/push_feedback.py",
+      "destination": "_push/feedback.py",
+      "source_sha256": "f7c047aa106afc6c2c4c4f60a77f584bdd082d4d66a10d7652e513bb1fd66288",
+      "sha256": "f7c047aa106afc6c2c4c4f60a77f584bdd082d4d66a10d7652e513bb1fd66288"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/push_telemetry.py",
+      "destination": "_push/telemetry.py",
+      "source_sha256": "02de358bceb223e84b2676b6b562399e55fecf1657449229faa7609b0db97849",
+      "sha256": "241918f6060db0073691f5e8c693ed8b51180c8115fb74e124493c1d051b794d"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/push_speed_limit.py",
+      "destination": "_push/speed_limit.py",
+      "source_sha256": "16666f6a55fff79d3020c03ff620b3358d9938ef2f078005d961f24b36102c62",
+      "sha256": "16666f6a55fff79d3020c03ff620b3358d9938ef2f078005d961f24b36102c62"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/ros_local_planner.py",
+      "destination": "_push/ros_navigation.py",
+      "source_sha256": "66b0a4f4a187b39b758c4e27edb056defd56bfffd9f152fb3d4cbbb7e80f1734",
+      "sha256": "6f995ecccb385e2be3041bad516f0e6af214df0e189fe562e6a8af61ed09447f"
+    },
+    {
+      "commit": "5321e348c2a49a3dd7017726ea9240738b929e01",
+      "source": "research/habitat_push/prototype.py",
+      "destination": "_push/controller.py",
+      "source_sha256": "c2ad068bb833ce57acadd0a14de58facbb39ee0e7b473bcc5cb2b6524d12cccf",
+      "sha256": "97dd35c03654b381ae61d1a67facb731186bbf3cd8a96ec1313e9e3e9ce19e4f"
+    },
+    {
+      "commit": "5321e348c2a49a3dd7017726ea9240738b929e01",
+      "source": "examples/habitat_gt_agent_artifacts.py",
+      "destination": "_push/transform.py",
+      "source_sha256": "c625ae70829c20236cf2e6ba5e3e7e5e27fd05691eb83f37a44bc3eb8324eaa9",
+      "sha256": "9fba36b667cc1cebc4e772c29f22de58fd8b59c4e0a87a7b6ffb3878c4b1f0a2"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_query_refresh.py",
+      "destination": "../../tests/interaction_reference/test_query_refresh.py",
+      "source_sha256": "9784dd247ae6dd64ea3b49ba0d59c8955206e938a078d50a9b219a79c4eb2b1e",
+      "sha256": "7d866b93ed32c74645cc19ed8f3338d3643ab482a1b1954db75894cce5756e30"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_skill.py",
+      "destination": "../../tests/interaction_reference/test_push_skill.py",
+      "source_sha256": "d85c492cd6256540eac59e0ee7ce9cc6d3e06abe369694beda374265d2c29756",
+      "sha256": "c6f47000cffacb0f671939b2efd9675ee3d8ca28a86fcf89c19a282fc5b72130"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_feedback.py",
+      "destination": "../../tests/interaction_reference/test_push_feedback.py",
+      "source_sha256": "5da250a44b15ef214a3580bd3ade1d993436dc8247a6d687ca09a667249937f5",
+      "sha256": "7010dd0ef54243c330e0bf9bfaa98b89502d881bd83a72ce1195a7404ee286fb"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_speed_limit.py",
+      "destination": "../../tests/interaction_reference/test_push_speed_limit.py",
+      "source_sha256": "1b53168182b5b69d20b91ce22a3326936457305037590b9f59530a092a97410a",
+      "sha256": "1b894bd09c61476fd723c2d30da3a07993920abefdd7fd9fcda582c283f6df6a"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_contact_control.py",
+      "destination": "../../tests/interaction_reference/test_push_contact_control.py",
+      "source_sha256": "54921b395772140541e36ef7087f2dab3a4ecbc27fc1bf243d328db2e282afe6",
+      "sha256": "3a17a5766b933d7b9be135b9208754b870dfec83a043360eabfd2e6ff7f44933"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_heading_precision.py",
+      "destination": "../../tests/interaction_reference/test_push_heading_precision.py",
+      "source_sha256": "62952514223dda3316c6e8b9be2bc9d418870fe28a86fb75fe15c2446f0c009e",
+      "sha256": "afb4785f4da2264c490653c1bb26158f604efe087335ff25b7d8f3138bbea5d3"
+    },
+    {
+      "commit": "523641f52c4619da5f3c901f736a407e32e52c01",
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_push_episode_resume.py",
+      "destination": "../../tests/interaction_reference/test_push_episode_resume.py",
+      "source_sha256": "5f777eb14d0bff1874134fdbd933b8921e86b451c149cfe9e4d2df4b23d460e1",
+      "sha256": "71e9427503f3374748287b9a2d6381b00031d7166432fcc42843ef39e099d1a3"
+    }
+  ]
+}

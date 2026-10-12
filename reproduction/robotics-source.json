@@ -1,0 +1,190 @@
+{
+  "reference_commit": "62056af6fcb9ac3ec611760415c0c4f2f91a1fb6",
+  "source_cohort": "Habitat Capture27; not all later physical/hardware variants",
+  "reference_evidence": "habitat-four-arm-contract-20260912-capture27-s012-r1/root-review.json",
+  "reference_evidence_sha256": "267a6fc081d11866fef4b471d5700ea100b23f66f9d60d5e2394464900782903",
+  "transformation": "Module relocation; public core imports; test source-path and sibling-import relocation; explicit debug-writer callbacks replace shared-directory dumps",
+  "release_patches": {
+    "script": "scripts/robotics_patches.py",
+    "sha256": "dc315db727d2f6bbe911ce9829e65bb5e6030d8785151d1f252ba1fccdf75627",
+    "scope": "Optional debug artifact routing only; model-visible contracts unchanged"
+  },
+  "files": [
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_publish_results.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/core/test_publish_results.py",
+      "source_sha256": "7351cba512e16f9969a913f6605060fe7e6da71b57abd843566459bf6de262b8",
+      "extracted_sha256": "ad89d8bdcf35b97eafa105be0d8cf0d75bae9eb83283aed921bfdfb3104e7e10"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_registry_partition.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/core/test_registry_partition.py",
+      "source_sha256": "af528d3b05fcf4d4909ec5d2ba87b65a5978ad45a5ad2a7253ec177f21ffc380",
+      "extracted_sha256": "8035b4022efcef1d4e971ee605daa2d408aeab07f187c6a51407de5a61ebc5da"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_safeguard.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/core/test_safeguard.py",
+      "source_sha256": "76d6d6725cc27e2779597f4882f1a73b7645eb939b0d34fb7b1dbf789ad963d9",
+      "extracted_sha256": "d3055b5a6665a0155e8bb8ea35fa830829289d31ee265ab09bb911152327759b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_unified_skill_schema_parity.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/core/test_unified_skill_schema_parity.py",
+      "source_sha256": "d4d55e2cf9b56f80e036e9891ee72e7467cecce012b248ec13cd209bf23b1b1d",
+      "extracted_sha256": "6fdf6f79877aa71cd54558354225941585a22ef00c3b51331c5c5df1f8dd578e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/capture.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/capture.py",
+      "source_sha256": "020828418ecac0760045c5c4205cfda293b83c14d0753d88f7bfdd602e97b41b",
+      "extracted_sha256": "eafd4f569b3f3717dc828061144ac5731c51b648f0fb6e62ebaed4828d15836b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/capture.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/capture.md",
+      "source_sha256": "f55496aaa83a5161fce496f8c02ad22d6ab8146c141f579d7079b8943a6b8937",
+      "extracted_sha256": "f55496aaa83a5161fce496f8c02ad22d6ab8146c141f579d7079b8943a6b8937"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/image_inject/image_inject.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/image_inject/image_inject.md",
+      "source_sha256": "aeddb66828b0d3725bb0a317c3b3945d998b2b8a2a74d4395d2dc1a4655d3a93",
+      "extracted_sha256": "aeddb66828b0d3725bb0a317c3b3945d998b2b8a2a74d4395d2dc1a4655d3a93"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/navigate.md",
+      "source_sha256": "057dc1d547a0734953a2bc678e54ebfcda277afcfc322c2d376ccc6591ecc5b5",
+      "extracted_sha256": "057dc1d547a0734953a2bc678e54ebfcda277afcfc322c2d376ccc6591ecc5b5"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate_tree.svg",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/navigate_tree.svg",
+      "source_sha256": "8fff11a5176ccc1177ca5d971fb6ff6ca9754ed217dfb64e28179d2273d964ef",
+      "extracted_sha256": "8fff11a5176ccc1177ca5d971fb6ff6ca9754ed217dfb64e28179d2273d964ef"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate_tree_bt.svg",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/navigate_tree_bt.svg",
+      "source_sha256": "64d27d66ab3cfae10e589374f84510458e4dd453b720dca759e39327c545685a",
+      "extracted_sha256": "64d27d66ab3cfae10e589374f84510458e4dd453b720dca759e39327c545685a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/press.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/press.md",
+      "source_sha256": "54b8602a46cee488c9fd97808a51ab133a426774c5ffb96cd69d6e54cef1eb42",
+      "extracted_sha256": "54b8602a46cee488c9fd97808a51ab133a426774c5ffb96cd69d6e54cef1eb42"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/query.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/query.md",
+      "source_sha256": "d2cb7e7a03d009817f7ae178424f7a231878d7b4dc6583b0b7da0274c5c8483c",
+      "extracted_sha256": "d2cb7e7a03d009817f7ae178424f7a231878d7b4dc6583b0b7da0274c5c8483c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/surround_survey.md",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/docs/surround_survey.md",
+      "source_sha256": "6378e7152e85bdd9645307e69b5bb91010d4d6efaf05bd645213758027b801af",
+      "extracted_sha256": "6378e7152e85bdd9645307e69b5bb91010d4d6efaf05bd645213758027b801af"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/image_inject.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/image_inject.py",
+      "source_sha256": "6ab927580fa7d09a006e9318e84781a2fad18ff476c0207a092444c1d6a63371",
+      "extracted_sha256": "a6448628c74891efa628656d8baad768e1d300697bc12ba05520f715796aa1fa"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/navigate.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/navigate.py",
+      "source_sha256": "c7eb8726ea2c60af5673377ca7f0cb10a1985d522aa5636a9926590a20bf45a4",
+      "extracted_sha256": "a41079590300e14efc3dad8cd8d18abcb00a6d353b0e53bf546395a25becd17c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/press.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/press.py",
+      "source_sha256": "b9533c6d575eb9be3c2ac3fbf02d7b5f377031084659dde623aacc7f3e41fd4d",
+      "extracted_sha256": "5c5a67d4b27861895f2a88b0ada2fe93b376e8108b31dace0ec0f5490948e1bf"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/query.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/query.py",
+      "source_sha256": "c09bde2fbf5ac8fc9ca821c9d8ca34c387403e55b8d6da35dc0e297a0892e011",
+      "extracted_sha256": "8e6eb240fab77a84ec0504b13c5a1392c36b607ccb44f1dd5e4a9837d374d03f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/surround_survey.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/surround_survey.py",
+      "source_sha256": "5d18ca668d734d0143256daf9d72bf108798eb3813379ab8488a442d70289bd0",
+      "extracted_sha256": "c9e9e8d0e10ed2e37543954d922368ada3c9f133b02b26c6677c31923b930ec8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/utils/compute_pose.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/utils/compute_pose.py",
+      "source_sha256": "805eebec92450bf97b13519199c6890f11e2c70ed664cbdb2b48bbc3cebdcbc4",
+      "extracted_sha256": "9cdc76f3e52da20deb9f1005e6bebc6b985bcf9be7860d294c574d75938f3256"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/utils/path_planner.py",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/skills/utils/path_planner.py",
+      "source_sha256": "78acef2fa20592b5defd0b8a7c1e22158cfad5ec77f60df1a5305673ab266cc2",
+      "extracted_sha256": "78acef2fa20592b5defd0b8a7c1e22158cfad5ec77f60df1a5305673ab266cc2"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/fixtures/recorded_wallet_glasses_se2.json",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/fixtures/recorded_wallet_glasses_se2.json",
+      "source_sha256": "9d5d6ec1597a1c0788888088ccebabeba38d3ef885625a002b4c17ec55dc2bb6",
+      "extracted_sha256": "9d5d6ec1597a1c0788888088ccebabeba38d3ef885625a002b4c17ec55dc2bb6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_capture.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_capture.py",
+      "source_sha256": "bff92115004be96acf6e045e4c0ed21ca55452ce29495ef4bc2fc1000e7a1511",
+      "extracted_sha256": "c2fa85b47083d20667c2a1bbdcad374b5b32f1962896c5bc5fcc142de871525e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_capture_skill_call_id.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_capture_skill_call_id.py",
+      "source_sha256": "53e10119004bd786ef8f24dcd61a81ac8d4e659b554b35581f34f67d9a676449",
+      "extracted_sha256": "da81d2615cb8d6c85afab35132ac2abad69a2ef91607fecd974723f0b36e64f1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_navigate.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_navigate.py",
+      "source_sha256": "e0c1613a5ddcfd998099dcdb0a0ffc0711ad2cbe7a7cfca7dd193f7b19fbd41a",
+      "extracted_sha256": "6116f08de7737f883c41225dea3d6bc06383d7332cbe44b42c80445aade58564"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_navigate_confirm.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_navigate_confirm.py",
+      "source_sha256": "3c5d8a404c7c17a460c869214d329bdc74ebb33da158be8f10294fbbaf61c716",
+      "extracted_sha256": "d71c96bab642f5a0aef635a8be9c90040d5770bfc66cc05d9f21d7de497e6fc9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_navigate_se2.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_navigate_se2.py",
+      "source_sha256": "dc365068b939e54306393c8a934acd9d9433e0926fe7f47f20f94ebd6270295f",
+      "extracted_sha256": "246ceb0720640c148ec1a19f6bb965b2e39927edb134606404eeb30842a03312"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_press.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_press.py",
+      "source_sha256": "f22516b156ff1194b54c1a48425b1b6fb3beb0f5b6fe669f339aff805df11857",
+      "extracted_sha256": "feca976ada0d5407f63b374cf8df4568a307e15334e34900d4af2f446f203c6b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_query_exclude.py",
+      "destination": "packages/bt-agent-robotics/tests/reference/skills/test_query_exclude.py",
+      "source_sha256": "d23a143b756d3e593a609f5fef11d263b7482ce494cfde557d79f228c4657440",
+      "extracted_sha256": "9d0db31c94c31cc0d8f11de6cae7f81027aa64eef36ec3ab6934cce78cfcc0d9"
+    }
+  ],
+  "not_yet_ported": [
+    "Full ROS agent node/subscription launcher (navigation adapter extracted separately)",
+    "FARM implementation",
+    "robot driver/mux",
+    "GT perception",
+    "push skill and later interaction variants",
+    "later hardware guards/capture/press fixes"
+  ]
+}

@@ -1,0 +1,5 @@
+[flake8]
+select = E,F,W
+max-line-length = 120
+extend-ignore = E203,W503
+exclude = .git,.venv,.build,build,artifacts,packages/bt-agent/src/bt_agent/_engine,tests/reference,packages/bt-agent-robotics/src/bt_agent_robotics/skills,packages/bt-agent-robotics/tests/reference

@@ -1,0 +1,249 @@
+{
+  "schema": "bt-agent-hardware-source/v1",
+  "commit": "517c18ad9f861fce657643f4ee263459279fc9bd",
+  "files": [
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/battery_guard.py",
+      "source_sha256": "8d85300871cff94a8200eead2cc8f4c4a2dd385820b3e702e38477e26d062769",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/battery_guard.py",
+      "sha256": "8d85300871cff94a8200eead2cc8f4c4a2dd385820b3e702e38477e26d062769"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/battery_hold_state.py",
+      "source_sha256": "6cc9bffcd3b4db34222ba15647734d2b8354e3847d72957bf746887835817ba8",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/battery_hold_state.py",
+      "sha256": "6cc9bffcd3b4db34222ba15647734d2b8354e3847d72957bf746887835817ba8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/battery_posture.py",
+      "source_sha256": "e0b46b177492a5b0ba500a5c94ac1b0d62130e1ae5786ae4c11a484d336d82ba",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/battery_posture.py",
+      "sha256": "e0b46b177492a5b0ba500a5c94ac1b0d62130e1ae5786ae4c11a484d336d82ba"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_controls.py",
+      "source_sha256": "6187e0ada2b0e07a398c73c06f7f66c5dcb32190d195cb97c49c2ceff7d647b6",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/bt_controls.py",
+      "sha256": "6187e0ada2b0e07a398c73c06f7f66c5dcb32190d195cb97c49c2ceff7d647b6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/hardware_execution_guard.py",
+      "source_sha256": "4d97beb58dad655f375ed71a9f79fcaaba7fbf6f5c91344f3951fb22e711c027",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/hardware_execution_guard.py",
+      "sha256": "4936e5ddbc057b7a78a36e8ca6803f87e175ce8dd52a0a85c39e8c7d8bb0d086"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/hardware_survey_description.py",
+      "source_sha256": "bae4f80cb3c28d08002c3d811a0a3a64dd67c4d31892da7f4de2bb52d1cdb4ae",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/hardware_survey_description.py",
+      "sha256": "b7ea7e30148531a470abd2c4f0bc161c8e237e3dc8a81dfd12f274acbd1fcffa"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/capture_contract.py",
+      "source_sha256": "cbbdf90abd1647ba38429877e4d3911709eb696230f70b8f2b64889dd235bfda",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/capture_contract.py",
+      "sha256": "cbbdf90abd1647ba38429877e4d3911709eb696230f70b8f2b64889dd235bfda"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/bt_controls_bridge.py",
+      "source_sha256": "09b96e4239f158a7f3dcb59af9099d086695dd6acd1ab5c2d5ea9521eefecf6e",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/ros/bt_controls_bridge.py",
+      "sha256": "34f22ee86288e50fb3cd2b233b9e6adb22d52ec4e18c299efc7ad964db0f6cbf"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/battery_guard_bridge.py",
+      "source_sha256": "54153c7ab2e66457e964f621d9f997a732701c4b5d8503ad096b89e168d95c63",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/ros/battery_guard_bridge.py",
+      "sha256": "d147682408c9611a79ff8216e17f7910d9f7c4fe00559857526d3cb5484fad92"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/ros_local_planner.py",
+      "source_sha256": "d28d419e6dc1f0fb893d38af94f610414a64edcf678db2759b2fb1b7282c8525",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/ros/ros_local_planner.py",
+      "sha256": "44e30e78160a8aa47611cb64d696bae2d2419d16beb53f9523b28c0deadd9b54"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/cmd_vel_mux.py",
+      "source_sha256": "41f4528604ce818c6ea10a09889ff0d649fb739f20abb22e0f2f3d9de58a6f7f",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/ros/cmd_vel_mux.py",
+      "sha256": "79cdccd0dda2624ecc35563190900ccbf7254f18cd51af967774ab511c011b6d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/ros/cmd_vel_mux_logic.py",
+      "source_sha256": "7c8d1ef86256d68d76b091595b8898ef8782b725f55d88646d2e13fa02ffb388",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/ros/cmd_vel_mux_logic.py",
+      "sha256": "7c8d1ef86256d68d76b091595b8898ef8782b725f55d88646d2e13fa02ffb388"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/navigate.py",
+      "source_sha256": "fd20d532a4f7bde6dcad9e3df67d2cc6291a88d7124fdd00a262017c52d4a530",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/skills/navigate.py",
+      "sha256": "7edd96ff054454839b68db0bbe6aa82291cf4c86c6876198de666fa9a974ddf6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/press.py",
+      "source_sha256": "e4e7a719daf404396f312f71eb6b8ad4e3028c6ffb89e7ffdd17a676cbe4fe9b",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/skills/press.py",
+      "sha256": "63d02b048f14c933f0010b2d7e52405841aa4c3705ab0ede8416c8199b7ad5d9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/capture.py",
+      "source_sha256": "88370bf78480914f0e3d9cb176f1501c32ae97557cea1d297176321bc474e491",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/skills/capture.py",
+      "sha256": "58457e87d212edb430b462acea5f4de2afb38db8e534e008572b3d46fecae8f0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/query.py",
+      "source_sha256": "00c4e95eed873b12e183c3fd5df521d26ffd163577475986d8ce235f23aff3ff",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/skills/query.py",
+      "sha256": "205ea2faf907d2e11640ddf00cc61837126ee8e858704c48a4b2c016be818fc1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_battery_guard.py",
+      "source_sha256": "0c9afe5bb35e918814485e43d14da7ce83a00c0c754021f86abbda27f9a81a03",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_battery_guard.py",
+      "sha256": "1e739abade76364526e919d05fb200c00434b029395c571e444864911796ff1f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_battery_hold_state.py",
+      "source_sha256": "5b4346e11fc3b05055a0d7cca5cb699d57d342dab30fddf8c9c17c057020f2f9",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_battery_hold_state.py",
+      "sha256": "6b0c4dd7412e09391d8e5a7696f8c231565b4ed3a1b20e92e7dc58b03a70275d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_battery_posture.py",
+      "source_sha256": "3d8d7e81c924b2c3600fc535ae84b7d71e77681f6ae3affa8ffc022c8d70a3c0",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_battery_posture.py",
+      "sha256": "135d0705a8418ac64f7ae6d1ced9af5ea76848e94ef551f40d9a6fb16d19bcbb"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_bt_controls.py",
+      "source_sha256": "05c6c642b77c4d92623a930f15d8127b415056931e29d08f13891bbb4106d9fe",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_bt_controls.py",
+      "sha256": "e417c3fa58056c400787eea7a5c171719fa739ce8354d47e059ea576dd3cfc49"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_battery_guard_bridge.py",
+      "source_sha256": "51b3e8da7c25402162767e90d72878013c4a0b31352d69824fdfecf395f79d4d",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_battery_guard_bridge.py",
+      "sha256": "68beebc4c718bc0c98331b99f4151e9354d07b62a2c4e135142ba2f9a7ad9661"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_hardware_execution_guard.py",
+      "source_sha256": "ad44117f5b8a28d1bf7f395e70263dfc756c446f7d184759381f5cdc306d2f24",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_hardware_execution_guard.py",
+      "sha256": "2dc2008cd2921a5bbc48ef291778ecb7c51951bfe96b4a3b22ab1aa3f7acdff9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/test_hardware_survey_description.py",
+      "source_sha256": "96b29bd6207d089148d47a26d2c80f143f75396da046d8db5cbd8c12498d6eed",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_hardware_survey_description.py",
+      "sha256": "0661eba238b511e1386925f8bb3474926749af8bd904635b1e10956ccd969545"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_capture_local_inspection.py",
+      "source_sha256": "ca96e39bb4344d9264fd9c4d25e72ba6b091ac0b896fc81bb82a1cc5e7454e7b",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_capture_local_inspection.py",
+      "sha256": "432d59b5046fb363568607ca9002687dd84ef8e8ef24f2f4d76ffc1b7f892516"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_navigate.py",
+      "source_sha256": "9902926bb36ed478ffed0fd1440827dad0ee12b80228082aa42cdfd46a5891f2",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_navigate.py",
+      "sha256": "1784a804e8011b24c6bc706a08b33c8650ece92d9402d8c7e8a936ac0a65bcba"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_navigate_confirm.py",
+      "source_sha256": "3c5d8a404c7c17a460c869214d329bdc74ebb33da158be8f10294fbbaf61c716",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_navigate_confirm.py",
+      "sha256": "d572a4d701cecb4bdc0e092efc1d57d984b16ccb20da96d76645d863ad5ae733"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_press.py",
+      "source_sha256": "4327477c7e222cf3b48365f32c51d8d7129a4d4ffeea79c068cd8642dcf545e6",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_press.py",
+      "sha256": "827c0bd96f4a75275b5f0d2c7ba2a3b8106fc3d2899fcdc4fbff9ec14be5c943"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_capture.py",
+      "source_sha256": "bff92115004be96acf6e045e4c0ed21ca55452ce29495ef4bc2fc1000e7a1511",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_capture.py",
+      "sha256": "14d2f272657a33d66f5d40bf7d6dbb981235471bd5cc71738c4dd0217c3cb949"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_capture_skill_call_id.py",
+      "source_sha256": "53e10119004bd786ef8f24dcd61a81ac8d4e659b554b35581f34f67d9a676449",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_capture_skill_call_id.py",
+      "sha256": "859631641b77e869429b7877e9b92a0d7b678a42cc16d004ee681227a9bd6e4c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/bt_skills/test_query_exclude.py",
+      "source_sha256": "d23a143b756d3e593a609f5fef11d263b7482ce494cfde557d79f228c4657440",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/test_query_exclude.py",
+      "sha256": "1831941326f8d2a3876b28f4b887086bd0c09fcf70010bb683e520eb3ed29aea"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_cmd_vel_mux_logic.py",
+      "source_sha256": "5983ee4de205fad57677914865bedb82c920b174d67150b2a02b6eba99236a97",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/ros/test_cmd_vel_mux_logic.py",
+      "sha256": "cfbf48706b6c39f455207600eec46f5ddd13cb23039bac15effecb41b3416632"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/tests/ros/test_battery_mux_output.py",
+      "source_sha256": "d85db40e27b140ef3f967f99650bb445f55973f01dbc4b9fd450955b12972359",
+      "destination": "packages/bt-agent-robotics/tests/hardware_reference/ros/test_battery_mux_output.py",
+      "sha256": "fd6ab785b51048bd8c92afb94acefdc020b5b5350601632644b3403eef1e1c23"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/capture.md",
+      "source_sha256": "f55496aaa83a5161fce496f8c02ad22d6ab8146c141f579d7079b8943a6b8937",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/capture.md",
+      "sha256": "f55496aaa83a5161fce496f8c02ad22d6ab8146c141f579d7079b8943a6b8937"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate.md",
+      "source_sha256": "057dc1d547a0734953a2bc678e54ebfcda277afcfc322c2d376ccc6591ecc5b5",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/navigate.md",
+      "sha256": "057dc1d547a0734953a2bc678e54ebfcda277afcfc322c2d376ccc6591ecc5b5"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/press.md",
+      "source_sha256": "54b8602a46cee488c9fd97808a51ab133a426774c5ffb96cd69d6e54cef1eb42",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/press.md",
+      "sha256": "54b8602a46cee488c9fd97808a51ab133a426774c5ffb96cd69d6e54cef1eb42"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/query.md",
+      "source_sha256": "d2cb7e7a03d009817f7ae178424f7a231878d7b4dc6583b0b7da0274c5c8483c",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/query.md",
+      "sha256": "d2cb7e7a03d009817f7ae178424f7a231878d7b4dc6583b0b7da0274c5c8483c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/surround_survey.md",
+      "source_sha256": "6378e7152e85bdd9645307e69b5bb91010d4d6efaf05bd645213758027b801af",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/surround_survey.md",
+      "sha256": "6378e7152e85bdd9645307e69b5bb91010d4d6efaf05bd645213758027b801af"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate_tree.svg",
+      "source_sha256": "8fff11a5176ccc1177ca5d971fb6ff6ca9754ed217dfb64e28179d2273d964ef",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/navigate_tree.svg",
+      "sha256": "8fff11a5176ccc1177ca5d971fb6ff6ca9754ed217dfb64e28179d2273d964ef"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/bt_skills/docs/navigate_tree_bt.svg",
+      "source_sha256": "64d27d66ab3cfae10e589374f84510458e4dd453b720dca759e39327c545685a",
+      "destination": "packages/bt-agent-robotics/src/bt_agent_robotics/_hardware/docs/navigate_tree_bt.svg",
+      "sha256": "64d27d66ab3cfae10e589374f84510458e4dd453b720dca759e39327c545685a"
+    }
+  ],
+  "transformations": "Namespace relocation; explicit capture/navigation debug writers; frozen config alias; pure survey-help test retained",
+  "excluded_tests": {
+    "test_hardware_survey_description.py": [
+      "test_variant_is_explicit_and_has_distinct_identity",
+      "test_manifest_labels_loaded_experiment_and_rejects_false_label"
+    ]
+  },
+  "preserved_defaults": "Capture27 and later Habitat profiles unchanged",
+  "scope": "Hardware-profile extraction, not live deployment qualification"
+}

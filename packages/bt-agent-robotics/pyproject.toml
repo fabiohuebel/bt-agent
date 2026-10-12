@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bt-agent-robotics"
+version = "0.1.0rc1"
+license = {text = "Apache-2.0 for project-authored software and documentation; see LICENSE-SCOPE.md for third-party and data exclusions."}
+classifiers = ["Private :: Do Not Upload"]
+description = "Authored inspection BT skills with injected robot backends"
+requires-python = ">=3.10"
+dependencies = ["bt-agent==0.1.0rc1", "Pillow>=10", "scipy>=1.10"]
+readme = "README.md"
+
+[project.optional-dependencies]
+navigation = ["networkx>=3.3,<4"]
+vision = ["opencv-python-headless>=4.8,<5"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+bt_agent_robotics = ["skills/docs/*.md", "skills/docs/**/*.md", "skills/docs/*.svg", "_hardware/docs/*.md", "_hardware/docs/*.svg", "hardware-source.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

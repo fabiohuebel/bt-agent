@@ -1,0 +1,1035 @@
+{
+  "source_commit": "62056af6fcb9ac3ec611760415c0c4f2f91a1fb6",
+  "source_prefix": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/",
+  "transform": "module-prefix-only: lam_v2. -> bt_agent._engine.",
+  "deferred_tests": {
+    "tests/test_framework_agnosticity.py": "Original filesystem-layout audit; replaced by release import-boundary test",
+    "tests/skills/test_unified_skill_schema_parity.py": "Physical skill schemas; port with robotics package",
+    "tests/model/test_scene_graph_llm_hook.py": "Physical scene-graph integration; port with robotics package",
+    "tests/model/test_claude_headless.py": "Optional CLI provider integration is outside first core milestone"
+  },
+  "files": [
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/__init__.py",
+      "git_blob": "ce11d437ef7c708713a0486a8e61344ff33abf54",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/__init__.py",
+      "source_sha256": "8081e7b47734978052921862a770f8c3b297bfcbfe5c7074c59e92e44ef80eff",
+      "extracted_sha256": "8081e7b47734978052921862a770f8c3b297bfcbfe5c7074c59e92e44ef80eff"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/_internals_config.py",
+      "git_blob": "41da764c95662a32c75d8d2d9872719d21846f87",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/_internals_config.py",
+      "source_sha256": "4043d50c813ef9f5494d2a69412c47a9bed923c12a482412818264e63259f8fa",
+      "extracted_sha256": "4043d50c813ef9f5494d2a69412c47a9bed923c12a482412818264e63259f8fa"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/baselines/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/baselines/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/baselines/react_agent.py",
+      "git_blob": "dded26b2d785dbb0daa4df00d9bdc7f9b2ee93dd",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/baselines/react_agent.py",
+      "source_sha256": "24284f39753e48456a0d001c5c347388a93c647534ff7037f65013c5717ac928",
+      "extracted_sha256": "5d23b791b3db93772c8cb13bc1db7a4cbd3b55f5cc2cc3f0c00752339342a5d9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/blackboard_keys.py",
+      "git_blob": "f47bb102a96bda401326cc9f875aa4214b8a38d9",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/blackboard_keys.py",
+      "source_sha256": "8ea4a865c214dee74c16e8fdd89843be50099b4b6a335c83905e37935e8ccea5",
+      "extracted_sha256": "8ea4a865c214dee74c16e8fdd89843be50099b4b6a335c83905e37935e8ccea5"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/config.py",
+      "git_blob": "dd3f22cb3f475bfd9aa184bdfb5f523feaa4ebdc",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/config.py",
+      "source_sha256": "32502dfb92cd9129bfbd638bd609dac89a2ac62ffb4300642293f044790494a9",
+      "extracted_sha256": "32502dfb92cd9129bfbd638bd609dac89a2ac62ffb4300642293f044790494a9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/decision.py",
+      "git_blob": "4621febfeeb2b289613d17701df53c4cd87026ac",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/decision.py",
+      "source_sha256": "01eae5ec15bf425cf83998afe387496e39f1538022d762ef112415584ba52522",
+      "extracted_sha256": "01eae5ec15bf425cf83998afe387496e39f1538022d762ef112415584ba52522"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/decision_maker_agent.py",
+      "git_blob": "6829c81729ad90906ce818dbd2926d567465bce8",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/decision_maker_agent.py",
+      "source_sha256": "32f6e69e465d1c9ad79b5fbc1acf5141ce1526d94c78b2ff9430857427c08756",
+      "extracted_sha256": "713b0acff47a0df33dcfdf5107e89eda0eb1feb1ca8d60eff2f328a487ae724e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/external_agent.py",
+      "git_blob": "eb9900f704ec8b1890da1014c495d827387b9e79",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/external_agent.py",
+      "source_sha256": "2d6c24d78b74ba64dd2d39c731838d913ddaafc34329777548ed6cc1b5c83d31",
+      "extracted_sha256": "e11b5ce0f0bd027980ddbec590afd0a2f52e238caaf9b37cc0bbbff812b5951d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/interface.py",
+      "git_blob": "a901d182ef3c00660e3f66a32f76c7f4805bc411",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/interface.py",
+      "source_sha256": "48f12a025097f4e82c4578641a7cc561a0ec7ee4666106573f78aa53a11c3f42",
+      "extracted_sha256": "8e1041055af5eb0f0ad9c7c41cb88a3a15d4aaa82a52c7bbbed05dff4bf20fd3"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/lam_agent/__init__.py",
+      "git_blob": "637791e112289b3ebcd2c28585dbd42507f04329",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/__init__.py",
+      "source_sha256": "a28ebc1c46a2fc5289cde447ebb707d5c3c77b428681766b1ad92c8dad350cdc",
+      "extracted_sha256": "8ff76d2f8df013429adc787bcda88836e3862169b5fff04f06d5e7ac080e1aff"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/lam_agent/actor.py",
+      "git_blob": "4ba23e0df80184bb3b0f3da25a7703cebb55da08",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/actor.py",
+      "source_sha256": "2811e8768818a354346bd2a9097a6169780ae3e12e49f4b4df7ac5477c9ae63c",
+      "extracted_sha256": "316b0da71bdc45b64cb3d184397aadc1b8844b1ca7295d31ba6bac1867c896a6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/lam_agent/evaluator.py",
+      "git_blob": "93f9a59da85eafe4553561495ab241fbdf0436b2",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/evaluator.py",
+      "source_sha256": "f3cf523c8d3956d384b11aa1117e9402793328c4d53d221f4e345741c1d7adeb",
+      "extracted_sha256": "00fd09cc8efa785e310cf886c328d7565b5db917320e828edd8767709ce9f7ed"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/lam_agent/planner.py",
+      "git_blob": "60dafa02b5193752e2bacd73144a6493a6cc2bd5",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/lam_agent/planner.py",
+      "source_sha256": "de086449db4a61b17160f4370fbcbb4b8c132ad24fe143d53886c7f688a40663",
+      "extracted_sha256": "21c5184b815566e3a95cfeec23c209389f0b909d699ee7d7d263e44ef0dcfac1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/role.py",
+      "git_blob": "9b3a15c18466446869d8d5eaebe63c344cd02f8d",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/role.py",
+      "source_sha256": "f927b91e902c19e4e3779a6d07bb312af3c4db1167971936b4a2270c1f3eb8a6",
+      "extracted_sha256": "fd1a736870f9450c2077ecab96526f8813161108aa59ac4321042f69c592db5a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/runner.py",
+      "git_blob": "91c8268f04100f704eaab0b12d2f0a864370e55b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/runner.py",
+      "source_sha256": "02091c9ddc0d012ca67ad157e770c4848b4e8c3dde91e711305fd50552ae3fbd",
+      "extracted_sha256": "4e1677b14a2bccc76f9444aea1d88f81e9d4cd4de8e1ec4ad10f0a51ac5ee773"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/__init__.py",
+      "git_blob": "2d2a2a46af1dc288d7e41229c0dca9ba437edb09",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/__init__.py",
+      "source_sha256": "f30002fc469ef5d5d7c0561ed65b55aa989a1682e359e50a6656b8b7c0196e70",
+      "extracted_sha256": "319a95432fc8f09e4a3ca2fba7752b7473cc933267d8f10c4d3881128c167b78"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/__init__.py",
+      "git_blob": "283aa9d86741b2798a18e8b7cafd1a73410162e4",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/__init__.py",
+      "source_sha256": "abe2291319c249c7572cf67c75f9c24c8a52058d7e09c1377e37a79ca5f318a0",
+      "extracted_sha256": "03b00bfba7d5a887542dc4904a82ae90ee929e2d170b48861c3f3bd9d4bcd2b1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/actor.py",
+      "git_blob": "3b07d8714bd19c6c7b617a0ff3af325a02f3807e",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/actor.py",
+      "source_sha256": "68046c256e76e595c3375925c3483a9ebfb39afc497bdfecfcbf52cb2cf11090",
+      "extracted_sha256": "68046c256e76e595c3375925c3483a9ebfb39afc497bdfecfcbf52cb2cf11090"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/actor_compaction.py",
+      "git_blob": "75bcf3d40d5569f1934122d59eca03f11d012dc9",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/actor_compaction.py",
+      "source_sha256": "e8476d7017f1843b6587df6f77905ceedb4532a03d204c8f5e5ac81c8d205dd2",
+      "extracted_sha256": "e8476d7017f1843b6587df6f77905ceedb4532a03d204c8f5e5ac81c8d205dd2"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/evaluator.py",
+      "git_blob": "6575f6a2ba6693de4a4368a740e9e10c3b4d80b9",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator.py",
+      "source_sha256": "795c2b13f4d6ffaf7db77e8bb9af1679ba6bde9c7595dd92000e8c7afc148e60",
+      "extracted_sha256": "795c2b13f4d6ffaf7db77e8bb9af1679ba6bde9c7595dd92000e8c7afc148e60"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/evaluator_claim.py",
+      "git_blob": "aff902277f0df6acdfcb79288866421687df0fad",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator_claim.py",
+      "source_sha256": "fe7ba9c3ec889f3c114845413f7e01ec53b790bafa6f12b149673960f97a371a",
+      "extracted_sha256": "fe7ba9c3ec889f3c114845413f7e01ec53b790bafa6f12b149673960f97a371a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/evaluator_user.py",
+      "git_blob": "7cbb90b6aa36d2f8458c40d25a1425e5636a635d",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/evaluator_user.py",
+      "source_sha256": "4c5d444ace6a7435446ff38a75a32adaf216fb848a4945ef203925c8f049b9e8",
+      "extracted_sha256": "4c5d444ace6a7435446ff38a75a32adaf216fb848a4945ef203925c8f049b9e8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/baseline/planner.py",
+      "git_blob": "45c69360b5cd51627500201dd56bb430c123ddd2",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/baseline/planner.py",
+      "source_sha256": "b805d6f3da4349112e8d91c4616b3ba4d353e44d361714efbb7d224c1158cd28",
+      "extracted_sha256": "b805d6f3da4349112e8d91c4616b3ba4d353e44d361714efbb7d224c1158cd28"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v1/__init__.py",
+      "git_blob": "2ebf358896770c4d74f61780e7bac2b38d60c5ee",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v1/__init__.py",
+      "source_sha256": "1fed580c965d0148fd8f637f9e87100b9340e6dd5495fecb001fd242b48cbfc7",
+      "extracted_sha256": "8c0b325ce3ac7b66d92d2ebfe2eec386eb5bfc3bddb56c51c7512bbc4b0a2bcf"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v1/planner.py",
+      "git_blob": "bebf4e501e4055809ef49182db97ea0fa2f270ba",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v1/planner.py",
+      "source_sha256": "263a9cd76471ea188b55e98b75e79fdc6461678f8b9ebf0e69e9405665e60f41",
+      "extracted_sha256": "263a9cd76471ea188b55e98b75e79fdc6461678f8b9ebf0e69e9405665e60f41"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v2/__init__.py",
+      "git_blob": "f3399dcaa370cd8af46e3468d82100a90be40a9b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v2/__init__.py",
+      "source_sha256": "8f780ac9fef7b496b086122a4ee5f83dd9b9d9324c692ed4e11c8842a9ca6bbf",
+      "extracted_sha256": "352b581638f6007d52136c13c048bdfda1f1c7c9e784a4342e90bb5a5aaed8cd"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v2/planner.py",
+      "git_blob": "3a257cd60da291e2fdfa685914c6b9327ff50335",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v2/planner.py",
+      "source_sha256": "a4fcb2f9dc48088df566ef8b6fee6a64fd8c775837069ee9a7c77dddaadfbd12",
+      "extracted_sha256": "a4fcb2f9dc48088df566ef8b6fee6a64fd8c775837069ee9a7c77dddaadfbd12"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v3/__init__.py",
+      "git_blob": "f43f22d243cfb35a8909ac750c03b672805a3284",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v3/__init__.py",
+      "source_sha256": "9a74accfac92012114976c8077db34a3dc6ccdef1c03679cd07b3686c3bb1b9f",
+      "extracted_sha256": "120850956c6cacb20263b9d72d4a2d43f9c0b2d4249e7a559e858daaa91ed3a3"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v3/planner.py",
+      "git_blob": "350a7d7edbbfcfead9f5fce905a89a52d89b2ea6",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v3/planner.py",
+      "source_sha256": "423bfa17e9313ec18848f1933618490cbc32e2b2d892a6f62427878f363c9470",
+      "extracted_sha256": "423bfa17e9313ec18848f1933618490cbc32e2b2d892a6f62427878f363c9470"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v4/__init__.py",
+      "git_blob": "dc2022cd9cfcd3c0504d2ff05f72d6ff78091a30",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v4/__init__.py",
+      "source_sha256": "4013fea59ad3f6d45eb33aa6f13d4f8988432f57714bee5ad35fc8d23384642f",
+      "extracted_sha256": "657af91bfb0b6df7baa1ef41ab491c3032978e2d249abe6c54e65a00c6445afc"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v4/planner.py",
+      "git_blob": "02c4d8804b2c556553460c64bdacf8c7b7d1cd23",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v4/planner.py",
+      "source_sha256": "40569cdb0330115b3105975744335a48c89716fffe2b6596fac8b986454bcf67",
+      "extracted_sha256": "40569cdb0330115b3105975744335a48c89716fffe2b6596fac8b986454bcf67"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v5/__init__.py",
+      "git_blob": "ab8e553391d7ae388dbbf16d6b03cbcc4d519dcd",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v5/__init__.py",
+      "source_sha256": "9654991741868f53b84a93e279d9b959c1b72ad071f4fe9cd590d5431529bab6",
+      "extracted_sha256": "c07493bc2afc272f07ff3ace555ff70d297cee2fddcbf5074362533d56db1519"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/react_v5/planner.py",
+      "git_blob": "27d5a75e088cf23c33e9ce102fe87346f9afea5c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/react_v5/planner.py",
+      "source_sha256": "8a6867134e8c11d412604e08f35da18357eee6166eea9e0e072fa42790f4e52e",
+      "extracted_sha256": "8a6867134e8c11d412604e08f35da18357eee6166eea9e0e072fa42790f4e52e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_fable_fixed/__init__.py",
+      "git_blob": "6c616b01c9156f6e7b7105da604ab93aee7eb977",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/__init__.py",
+      "source_sha256": "fdae51b89d3a02425f31f03613e1af22fccd2d2af173a862f1bbfc2733609d87",
+      "extracted_sha256": "bafe22d260106eeea454d46d13a72d35e9bdbf5cce7ae2b2490b8b9847e0dc58"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_fable_fixed/evaluator.py",
+      "git_blob": "be3148e0cb12025b4c22fdead3e5df734f5311bf",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/evaluator.py",
+      "source_sha256": "db98412a2ad1dfba6af0991c6f4cf4c9b312dacf59a16d6b74634270e2e1f66c",
+      "extracted_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_fable_fixed/planner.py",
+      "git_blob": "927cb3af1efe25751cae473307ead66f5206c463",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_fable_fixed/planner.py",
+      "source_sha256": "0ecaaedd185eaf3e019075bd7b2d560445d29c213ed2abc86e45e29adefab841",
+      "extracted_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p3_milestones/__init__.py",
+      "git_blob": "099473cca9afa46bb29bdc64f08af8b4adde0715",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/__init__.py",
+      "source_sha256": "61a4b13428f4ce48a7847133780c9b7a6a2b211b13d571bbc0c0790d183a8f3c",
+      "extracted_sha256": "3e99f0602029a6c18fa9327491c867dab4fb9bdcbc70d3cf9afabd392f6b46b7"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p3_milestones/actor.py",
+      "git_blob": "6184ac4c61007eba9fdad840ef527f8e5cf8f86b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/actor.py",
+      "source_sha256": "4eb34d1dd9f0e82e28c8d9485bdc91b9d5568b1ec90b44ecf7517a18757d45e3",
+      "extracted_sha256": "4eb34d1dd9f0e82e28c8d9485bdc91b9d5568b1ec90b44ecf7517a18757d45e3"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p3_milestones/evaluator.py",
+      "git_blob": "be3148e0cb12025b4c22fdead3e5df734f5311bf",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/evaluator.py",
+      "source_sha256": "db98412a2ad1dfba6af0991c6f4cf4c9b312dacf59a16d6b74634270e2e1f66c",
+      "extracted_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p3_milestones/planner.py",
+      "git_blob": "9af74180ab5287ca91115f5ad951e8cb669e02ae",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p3_milestones/planner.py",
+      "source_sha256": "ae28c896fd5a35571edf35b6e1f989e5e47cc8b32e894fe5b97c0ec6ef7c53f0",
+      "extracted_sha256": "4036de00363d1f2da4be70bcab4aca2cd1433c9f70c6d73c4780ec54b66cf934"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p4_query/__init__.py",
+      "git_blob": "cb329ea9e442bc2d0929973c8ecb184f03cbe12c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/__init__.py",
+      "source_sha256": "1fffb02b207c85eb8420d5d9e4c3d3b1f2c6315d42ca3a5acc5adb9022f205bf",
+      "extracted_sha256": "6f95702377f6ac9eeb24c4e38bcc489c849e7c573747435b4c37b2176781b41b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p4_query/actor.py",
+      "git_blob": "0f52eda5019503ca255ed6b00eef932074b1d3e0",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/actor.py",
+      "source_sha256": "d8c9f1d2921741e59e49c98ae35e4507b2801bb60cc0829917ae1dbd10075172",
+      "extracted_sha256": "d8c9f1d2921741e59e49c98ae35e4507b2801bb60cc0829917ae1dbd10075172"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p4_query/evaluator.py",
+      "git_blob": "be3148e0cb12025b4c22fdead3e5df734f5311bf",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/evaluator.py",
+      "source_sha256": "db98412a2ad1dfba6af0991c6f4cf4c9b312dacf59a16d6b74634270e2e1f66c",
+      "extracted_sha256": "4b96462aae5fc83880c72feb945c8657f8189ac10a5e811271c989a54192fe03"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p4_query/planner.py",
+      "git_blob": "927cb3af1efe25751cae473307ead66f5206c463",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p4_query/planner.py",
+      "source_sha256": "0ecaaedd185eaf3e019075bd7b2d560445d29c213ed2abc86e45e29adefab841",
+      "extracted_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p7_leniency/__init__.py",
+      "git_blob": "4f90253777a9240d753d27188eb77d47d76eed6b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/__init__.py",
+      "source_sha256": "e88cb6cf595e6008e41a96f77ac42a643e439f289cd79a415aa0ec3420ac50a1",
+      "extracted_sha256": "edee51feeac76468820f47b7bcf6716ac53e6a2ac3b555de2e18a7cd967e45ba"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p7_leniency/evaluator.py",
+      "git_blob": "4b1206e97c6386627ee908b972f3d5f2023f7ef5",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/evaluator.py",
+      "source_sha256": "ac8b6ddc7f64c4ec1964d8331c631e19efcd4b6163777ad8cb424c5ab00fcd9d",
+      "extracted_sha256": "39b48c5f3e67625f08e0d671497e0f3bfcd279d632a9b357005c1f4a6fd0a109"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_p7_leniency/planner.py",
+      "git_blob": "927cb3af1efe25751cae473307ead66f5206c463",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_p7_leniency/planner.py",
+      "source_sha256": "0ecaaedd185eaf3e019075bd7b2d560445d29c213ed2abc86e45e29adefab841",
+      "extracted_sha256": "cec313df8621fce1f11c50a61ccd99a981c13957a74316726285c2d814bca03c"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_structural/__init__.py",
+      "git_blob": "1db628c6e4648e624b7d5969468a4c829d990128",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_structural/__init__.py",
+      "source_sha256": "314affebe84ed4eb7ff68d0928ba706e0a1aa9c8a88c34837ea4ceb7e8993e22",
+      "extracted_sha256": "c560be6c0037fcc9943caadc89ad882918514b0c3e85ef9d93599491952a82e2"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/textrung_structural/actor.py",
+      "git_blob": "5520d350d2850fc9623a652366d03a3348c2ac9e",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/textrung_structural/actor.py",
+      "source_sha256": "9fbb28e34f57f5001b0e9e7485946c72a98e8e435dd31978584fdd085fb7a8b5",
+      "extracted_sha256": "9fbb28e34f57f5001b0e9e7485946c72a98e8e435dd31978584fdd085fb7a8b5"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v1/__init__.py",
+      "git_blob": "2dc1fd3fb4d35dbd00243bfe3cba167c3121f2bb",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/__init__.py",
+      "source_sha256": "26b8fe380889be9346abbe01db2fcf8ec602085ad61a7ab9cc4b7ee847b15e34",
+      "extracted_sha256": "a5aa7c65ea872e10311f404c7d6e19e7e87df85b276c1f1500fdf2253b076d9f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v1/actor.py",
+      "git_blob": "cc5492ffafeaaecd92eebd333e04a67543fb001c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/actor.py",
+      "source_sha256": "d5d086a9d8731d490581f8a7cf58cb5e479410028ef5099d7440f359b06369bd",
+      "extracted_sha256": "86c6ab72f746b5aefc13a0bcf3c9990d24a580ac5eeaaae42daac9a411fad300"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v1/planner.py",
+      "git_blob": "e968c8a2e8f63851fdf306f578e445e52c33104f",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v1/planner.py",
+      "source_sha256": "be9abc7968ff24fd330f0f4825576634aabba4ce381704d73fe9552f3b93fcb1",
+      "extracted_sha256": "45889c28e2bc1ed6817f0783f2a43314424e74e78f3d76e8518408ce1ffed34e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v2/__init__.py",
+      "git_blob": "ba88d80d6d729a27150e4c7fd556dcfda0529b51",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v2/__init__.py",
+      "source_sha256": "b11ef75e3b82993a07b658dce10f296385f5fd316b56f8a04bf40c05c5253646",
+      "extracted_sha256": "685569df91a200679cc48315b97e1fccd1f8d608136b37eda1c62522938690bc"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v3/__init__.py",
+      "git_blob": "09bd84c56fef496701557bc2c7988e7a8f8ea8d6",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v3/__init__.py",
+      "source_sha256": "5bdc8d8fa48fbc9c2949879443de5d1e86ee67e61dafac609c4936adccd96ec1",
+      "extracted_sha256": "0add0e4fdc9b0b5fd4f672253ec2bea0d684f8aea2e9ac893ef91ac758ef33d1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v4/__init__.py",
+      "git_blob": "cc68d10813ccd12611a0f9aacb64487b5adfa1b5",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v4/__init__.py",
+      "source_sha256": "af6eafaebb4a1fb99a57a780b1abbe6a811f18d3528e4101a55459fd7dc48adb",
+      "extracted_sha256": "c5dd415ee34afd04ca431acef9a0083b8ee351e0958ab71fb570f2a6fa315061"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v4/actor.py",
+      "git_blob": "76114ea7d968332d63a464e7bf5c024cc027c2d1",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v4/actor.py",
+      "source_sha256": "cdeb183eb04bebef8d3f7b6bf8628d2a4b842c5f95bf3cda8a1212738204309d",
+      "extracted_sha256": "71e80f8645124444028cffb08e1038c89962637ddfcc1fda5cb8bba477637f41"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/tiamat_agent_submit_v5/__init__.py",
+      "git_blob": "0850ae764e7d575576b7d2bb0ff6fe662fb41a37",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/tiamat_agent_submit_v5/__init__.py",
+      "source_sha256": "3f21369beb8daaff9ad0827acc2e8f3c3cb22ad48a3c4dc8f35b7df303c82e96",
+      "extracted_sha256": "12367e13a5d2eaf20cd7a708fe92b202babe8058fefe86549155e196e538fb7e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_literature/__init__.py",
+      "git_blob": "1591ead44392c64b3d9a4a2081270a46026a5c52",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/__init__.py",
+      "source_sha256": "768a5b31bdeddba0281b7f9d3248f236101f09aec2079a79a7ec7458fd99e66e",
+      "extracted_sha256": "c98b36bc5fbd9d63e5ff3c68ed5c4046fc67afd04260bd2657dc100e61f509ca"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_literature/actor.py",
+      "git_blob": "b53e0c07ed8cd20ede9e2bfbc766b40ba0b7a574",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/actor.py",
+      "source_sha256": "a7c5bf3448887419df45231d62245451a15743c1c93d15d2b54a8e277ddcac7d",
+      "extracted_sha256": "a7c5bf3448887419df45231d62245451a15743c1c93d15d2b54a8e277ddcac7d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_literature/evaluator.py",
+      "git_blob": "9a57294b415525934b46faacfb80be8f78968a85",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/evaluator.py",
+      "source_sha256": "5715e908f238fece6b70dab6b60ca753f9358ff4202ed8ac1c88eee494da8de7",
+      "extracted_sha256": "5715e908f238fece6b70dab6b60ca753f9358ff4202ed8ac1c88eee494da8de7"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_literature/planner.py",
+      "git_blob": "cbd667c1b092d720db569cf4e4d105982ff4ad68",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_literature/planner.py",
+      "source_sha256": "f149b47a137558edecd6e846e4b422310ef14f3c6b7045305d511e9bd0722762",
+      "extracted_sha256": "f149b47a137558edecd6e846e4b422310ef14f3c6b7045305d511e9bd0722762"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_no_leaf_protocol/__init__.py",
+      "git_blob": "081253c8a18690ba14e39f33037d1d83523531f7",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_no_leaf_protocol/__init__.py",
+      "source_sha256": "b43b0bbae140395cbe8b6eb212263389f410de38213ff5bbff0d75524c48c6bb",
+      "extracted_sha256": "ba0d5dc7e9a8f7678085020c2f086d3e55c8ff701cd9973d8e1e1b17447f1561"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/agent/system_prompts/v1_no_reflexion/__init__.py",
+      "git_blob": "2af9369ae01a1443436f07ed14c186eb01e51139",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/agent/system_prompts/v1_no_reflexion/__init__.py",
+      "source_sha256": "7b2ecef4dd232a1f84d4fe231296807b05130b2793302ee6640e9ed84fac7a95",
+      "extracted_sha256": "abc75f2e9784613585c4ec043662c9a863057c34e7f7d0cc1c1bd3781c8978ba"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/_conversation.py",
+      "git_blob": "8be9e0416d6af730ae7a560459232e98b75ed751",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/_conversation.py",
+      "source_sha256": "d1d2df4ef804477bb53ff6931c36efa8406c9808c9f75976cf5da2bf29dd6560",
+      "extracted_sha256": "d1d2df4ef804477bb53ff6931c36efa8406c9808c9f75976cf5da2bf29dd6560"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/_state.py",
+      "git_blob": "f51595c31e5a03183869a0285ebc7f03d1b9457b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/_state.py",
+      "source_sha256": "4a90a4522902f974a7ea0ec8cca14fb8a24be49a137139483cbcec002826d663",
+      "extracted_sha256": "993400f51e02eb88ceee29255d0cbb64783d236a5f695af9921584fe41a12378"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/advance_milestone.py",
+      "git_blob": "b9826fea0d8c933fc92cc608fb9fc471d121406d",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/advance_milestone.py",
+      "source_sha256": "2b1896578bc4b185777e3611f6e3f2776da7f727a805e6b2956c7cdbe2a2f23c",
+      "extracted_sha256": "f8bdcf50def8c4096be911b5babc8bc573ed9696930b89814359e7be617d8383"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/conditions.py",
+      "git_blob": "646d40671d3b2d68894f0c986b6cff38ac392ffd",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/conditions.py",
+      "source_sha256": "b4b7cfeef53f95c6ddbb93f5d954a92cc70f44993f7e36d568313e58f09e932a",
+      "extracted_sha256": "abd671255c11e2cc3f1015509bb1ad495994bbc84ec3ba76224baa612ff64461"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/evaluate_completion.py",
+      "git_blob": "bcbfa1f7de8327fb8b299f3079cd5fb6d1bdcfa7",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/evaluate_completion.py",
+      "source_sha256": "42fa2ab9f66794e614557ae4fbc2eebc4e8d5fcaacbfa7f87667408f30d4209a",
+      "extracted_sha256": "f706363a7224867e13d498ef0cfe4fb052ec3f5767c1bea979876e831fe527a4"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/execute_skill.py",
+      "git_blob": "f1c09ab81a229d6c5fef1cb2ab0a46209f57cdda",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/execute_skill.py",
+      "source_sha256": "e15873d8db19b2eab95514f5359783fd294a9ccddae16cdeda483844a2e2e021",
+      "extracted_sha256": "474b8bc89a57e28becef72d8849b2edbd621c1b8880f59bb97aff619ebf80de1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/handle_all_done.py",
+      "git_blob": "998c81eec4e2cefafe1afeadc0a626309aeb4740",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/handle_all_done.py",
+      "source_sha256": "f998cbe0c0e6a44cd8d9b9761dd9d9c834047c9903b070869ed0287b47c637cf",
+      "extracted_sha256": "a7ab5c7321dda5a984b947f5fe85bf377f9a031451ebdf022491b6d9f403442f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/plan_task.py",
+      "git_blob": "07c2a9991dc89e0a7bf8466475da2f01321fe568",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/plan_task.py",
+      "source_sha256": "1a60db8407db8298d5b777ade3c3e9bde49ccacd9762e816a9c89325ba76fb8d",
+      "extracted_sha256": "7eaab9d74abe93bdcc6848f9faeb1a6941f558f9467c6b73ae31df347a34d0ff"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/route_verdict.py",
+      "git_blob": "0628b1e44e46ee2a4aa3522c59444b5fc25c93e8",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/route_verdict.py",
+      "source_sha256": "8ebebb9544379465f42d8f6cffb3b2187c092903ecb2ea16006f6f4c04867451",
+      "extracted_sha256": "ecbab7fe072b8c6803b5bd0ad4a327f7111eeaab2c33d25a31019e34ea4171d2"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/nodes/select_skill.py",
+      "git_blob": "67c525c3a019778010f8cab4b9747df07d4a22a4",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/nodes/select_skill.py",
+      "source_sha256": "3dc96e04cd700b0b1405367caf11154c10ca4f200f40af661991a37657b29da5",
+      "extracted_sha256": "2b58093990a9c27adf8511258eb522c773477ab8f42d98bfa45efed9af5a392b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/bt/tree_builder.py",
+      "git_blob": "1fefb44dc436aeca32e5c8cbafe4aabbe066166b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/bt/tree_builder.py",
+      "source_sha256": "cb30180c5302c2978b052fd883cd81027494378db06df00a3e7440704d501abb",
+      "extracted_sha256": "3fab23d0c5f1341a2000f9f90404d63fc6b7f0dc477857c0410731f2dab2fa72"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/model/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/model/backend.py",
+      "git_blob": "2ee6d0511ac74736f2bef95728af1a7bdc1af826",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/backend.py",
+      "source_sha256": "bfba16aa5bd9109da536aa063d26add98b7960583dd81ae4d92f56b2eb342c72",
+      "extracted_sha256": "eb55fe3da93f5dd0bdf05405229a0c23bbdd6058a79bbcd24619357a6c1a3c05"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/model/claude_headless.py",
+      "git_blob": "3578ecb31c782ea0905e6892d3603d7c8d1af45d",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/claude_headless.py",
+      "source_sha256": "fffc751af366b1edce38978c5e0437c58350b7c5fa190e9a99babd28a5c7ee8f",
+      "extracted_sha256": "1e196eeb46cf8514768bfe11fad726f13c7ee1c8905ace991314a5996bcdab6e"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/model/exchange_recorder.py",
+      "git_blob": "e3c5058adc11777694f4e64c37115d8a499d61f8",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/model/exchange_recorder.py",
+      "source_sha256": "2fb96797acad43537f8e5697988c81f8d88ab9b88103f51b611db064c74f5ac1",
+      "extracted_sha256": "d454990ba4406cac5546f1e2b485be1811f1bffa8dcc7d422c32fd7c0bf365c5"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/__init__.py",
+      "git_blob": "5aa0e1a06b65d0b3b971a515ada48119aa9a337c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/__init__.py",
+      "source_sha256": "69ee935ec821da87cb5b41dcc42a12dc80debd4f47ad3c7c59ae9cfcc73f525e",
+      "extracted_sha256": "89d2bc222f1faa58418497bc333ee5472990a38fbe4879f61446d516e17f06c8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/channels.py",
+      "git_blob": "0b25864a763b6ceb2507a0ca6126e0c0d82cd3ea",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/channels.py",
+      "source_sha256": "28584f2201f6e355b02e843e6e8dbe1f9826840bd2d2ca83171c54772f482929",
+      "extracted_sha256": "28584f2201f6e355b02e843e6e8dbe1f9826840bd2d2ca83171c54772f482929"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/event_sink.py",
+      "git_blob": "1e7cddf8f842412cbca230a2e44e00edd619bf76",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/event_sink.py",
+      "source_sha256": "4848e3bb1e45a8fe3259fb7681f4ac0e67615391093714906137a3ac6aba177d",
+      "extracted_sha256": "4848e3bb1e45a8fe3259fb7681f4ac0e67615391093714906137a3ac6aba177d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/fg_server.py",
+      "git_blob": "938d9dd5520626080afc3323599038d21e7a8b13",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/fg_server.py",
+      "source_sha256": "84181ca3252d9b5ffbc62523eb2d65a83ba78b37d20659d82442eeaaed285497",
+      "extracted_sha256": "f66eb0c23ce6e40f112a3ab27a96ca49d9f940cbb7963ce25a24e9985e00ff5a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/jsonl_recorder.py",
+      "git_blob": "541014b35bf60d901770e34cef19d8ec506d293b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/jsonl_recorder.py",
+      "source_sha256": "26833d90f75257da391261327abffb266cb2a7f4f8c5c2d0ca331b526d8eb2e9",
+      "extracted_sha256": "7ece7862582ac84eb5ce31ff38789e703a4cbced36522054e2cd0e2a1c325681"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/markers.py",
+      "git_blob": "7824b7f5f428ee0a9e3c69178c6c2d7bd71adf38",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/markers.py",
+      "source_sha256": "afd84c9eb6d20af819d81bc43e4caf0490a83fb39002333d7cbf07195cc51270",
+      "extracted_sha256": "afd84c9eb6d20af819d81bc43e4caf0490a83fb39002333d7cbf07195cc51270"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/mcap_recorder.py",
+      "git_blob": "8accc044779b393897c3a0b0db51f8f340f7f06b",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/mcap_recorder.py",
+      "source_sha256": "2a6567e1ef7328e7780607f978bdcb50d67fc1c440d0f8b10075467b6d48f1bc",
+      "extracted_sha256": "df8f3bdc22410b08f4681595fb94c4d5f4a9b4718b25b9b02df8c5472519ab7f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/phase.py",
+      "git_blob": "6daab80dc81956d4ed30e2c362076deb03a72b14",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/phase.py",
+      "source_sha256": "56cc82bdacd581de3c0d9d62cae710909f1f193f121431075ad1e758cc186839",
+      "extracted_sha256": "56cc82bdacd581de3c0d9d62cae710909f1f193f121431075ad1e758cc186839"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/tick_snapshot.py",
+      "git_blob": "9f1eedc01cadfae94121b7ed9f2ff76ec4bcbd0c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/tick_snapshot.py",
+      "source_sha256": "c5a8a0d3f5239f8eb9708f0db67d26173bb862a9bbf6c2a0400589d0e0a38c00",
+      "extracted_sha256": "33d08a696eceff4b03497acf27020cda900c21ccb86d61b285e144e45b5b3792"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/timeline_recorder.py",
+      "git_blob": "feaee83999c8743a4a797120804d9d5d05ee9278",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/timeline_recorder.py",
+      "source_sha256": "8d4b5c0dbab7692fc90a68cce34effafc5fbaaf3876ef0f47cb8d918a815fa9d",
+      "extracted_sha256": "e6ffcee41d800f989d48690e950e97a5852d3de80717599057f8a051402fad4f"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/observability/viz_bridge.py",
+      "git_blob": "76dfe2f219c75daeafca55210d4755a2f877028c",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/observability/viz_bridge.py",
+      "source_sha256": "d14d644e73e17c1755042f70919557601ce786f00c83ffa9103e656dbcfe2832",
+      "extracted_sha256": "a9715e32f02ce2515cac2ff009c21ada38e8201c23455148df47ee4b70d4485b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/__init__.py",
+      "git_blob": "a99a24254750df22da9f2e847f26c6e6bf74c856",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/__init__.py",
+      "source_sha256": "a30d89e5fddcd7bba384d1c75c744bfe1373df7f353bd79e541ceee1125dcf93",
+      "extracted_sha256": "a30d89e5fddcd7bba384d1c75c744bfe1373df7f353bd79e541ceee1125dcf93"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/alfworld_skills/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/alfworld_skills/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/object_store.py",
+      "git_blob": "bbf5a75eb344f12a83248e34adfa4a7882892a51",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/object_store.py",
+      "source_sha256": "2bbc28cffc8f8699d95e6c75f5b6d2660deeae827e3c8da26ff160770423068a",
+      "extracted_sha256": "2bbc28cffc8f8699d95e6c75f5b6d2660deeae827e3c8da26ff160770423068a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/protocol.py",
+      "git_blob": "0db9d109507df06253d1b336bc066d923cb888c8",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/protocol.py",
+      "source_sha256": "d703651a3827e35aaeadbc1eedc1481dacc344f7a0f67333523cd929c55988e4",
+      "extracted_sha256": "d5209ac80f95740059a2ce46d2ceb338f9b8a4090a286b5a15aecbe59f8874b0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/registry.py",
+      "git_blob": "c68e9f88edb9742399a111ec1f2cb2d8ce578775",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/registry.py",
+      "source_sha256": "04e5a108f58d629333cd3038636c879480220a1fb2f12da7e78db24dfc754423",
+      "extracted_sha256": "0efb76110a8c6c4c4e627f6e43ea38472d2c20437d696286e814f1d592934bc0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/src/lam_v2/skills/safeguard.py",
+      "git_blob": "102f5758e04e9c89ebff7acfe539174474508e63",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/skills/safeguard.py",
+      "source_sha256": "d56171d685286c1764dd5a77e0dfb29320fa4d6278c430b15158a0277d8c07a8",
+      "extracted_sha256": "0ceb5baba2dc5c9a6ca71763cee4ae35eed3db0f443c2dbd50962a432511ee38"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/agent/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_ablation_config.py",
+      "git_blob": "833ed6402046c6fccc86bd00cb8d229c032e7207",
+      "destination": "tests/reference/agent/test_ablation_config.py",
+      "source_sha256": "5041268d1d7c1d53b5fc2c2444845344a05815e799ed00f50919c3fef94aa2fa",
+      "extracted_sha256": "98ecac2e6cd3268cd51dbb607289ed00d9bdf14392c25dc653e888aa34d8793a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_ablation_switches.py",
+      "git_blob": "32808fcdc7e5fd5abd15917417ea19076f9de814",
+      "destination": "tests/reference/agent/test_ablation_switches.py",
+      "source_sha256": "e439e35aca2e3e05bd5dd4b3eca2450ce0e6e19b0d1718703a7bb22b5d0daa0f",
+      "extracted_sha256": "cecb34541e841467e9498f060b7bea63ad5d77ba634210b3a2d94f016b45ef2d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_actor_budget_disclosure.py",
+      "git_blob": "7593305b4af8bc5bacd2c56e56cc41d60c4564f7",
+      "destination": "tests/reference/agent/test_actor_budget_disclosure.py",
+      "source_sha256": "84c3ebe6523f2da787c4e33ebe666498fa86b7628f07600d536351f1a8117c5d",
+      "extracted_sha256": "a5fb5b27532da5a335eef5281e893b43288cceae3d564be1d2fdd700a0314f27"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_arrival_guidance.py",
+      "git_blob": "040597dbbfbf28434b8b8791e2408656cc718621",
+      "destination": "tests/reference/agent/test_arrival_guidance.py",
+      "source_sha256": "5a9923b5a07c77f0955a0c962947a77c03c8ca4074b2ad36f31fd579492dac6a",
+      "extracted_sha256": "a6aed5ad325e59b1afe1c22f0122565eb3324e946b2ecff1abe755dc44d4ab83"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_evaluator_user_interaction_type.py",
+      "git_blob": "f2b59a2da231e5f8815291bd46a9e4c06c0e7b24",
+      "destination": "tests/reference/agent/test_evaluator_user_interaction_type.py",
+      "source_sha256": "0696ab8553aff3d9e94585be6752c81a7e7ee11b3a2ffc56b057bdd4f53d5723",
+      "extracted_sha256": "bb86ac486a0524cd2bf89cf9e084ed18c1bd57dc1a7cf7d3610331feccc1b579"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_p7_evaluator_substrate_wording.py",
+      "git_blob": "9af258cd47da641ad96c4841a4f51f2eadf2e9a2",
+      "destination": "tests/reference/agent/test_p7_evaluator_substrate_wording.py",
+      "source_sha256": "554cc01f68ceb167416afe47787478187d0a399991df8c90bee436ea0ab2839c",
+      "extracted_sha256": "0b5f990760f614a73f7eb5d8e4ee012f736254c35d8c2a699921ddb3d21718d0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_press_status_guidance.py",
+      "git_blob": "8837fd7f33df5f55f3efe742ca7081c5c41e7196",
+      "destination": "tests/reference/agent/test_press_status_guidance.py",
+      "source_sha256": "d70c05eff2de32707459b874b4f8f70054b1d6860bdce0c029215a1074a37c7f",
+      "extracted_sha256": "7e75b700e0dfd56585994a58dbb2e133bfe590040ab283353cbe4729f230315b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_reproducibility.py",
+      "git_blob": "704a883454ac1eb4d9de476ebb957baf759c95f9",
+      "destination": "tests/reference/agent/test_reproducibility.py",
+      "source_sha256": "5527ceb8655b3ee0f2f36decefba226c01cdf71989e1386ab599b9871d625762",
+      "extracted_sha256": "17ceeaa1ca2b2290e1d14e245603c34df027fc18b0cf549d7ea8e8cd3b6ac27d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_role.py",
+      "git_blob": "83b391cab45aecad7e9824aa8ae848f1e6f7ba9a",
+      "destination": "tests/reference/agent/test_role.py",
+      "source_sha256": "81b672230c6f50812d78fb0b7a88374f08f80f212382368efd59b3dbc192e52e",
+      "extracted_sha256": "b2089d39c3d55376d8bd1d13c837e84dd5e2778da98eb33557b01b840ad116f0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_runner.py",
+      "git_blob": "36da517f0e55a4b3e2ed09b0bcd1500ccf3ba5ee",
+      "destination": "tests/reference/agent/test_runner.py",
+      "source_sha256": "7d98da153c433e4a34c0e3c8dbf21a9f83a1eff1f02d8bab6e72fc5e4f166416",
+      "extracted_sha256": "08635f7fa709d7c4d55a8ab39316b748c3c43ab4afbfd08d1b1675e50a9f5198"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_select_skill_budget_disclosure.py",
+      "git_blob": "3e620db10a0010f5006d1860d9cd0398700963ec",
+      "destination": "tests/reference/agent/test_select_skill_budget_disclosure.py",
+      "source_sha256": "c30dd6feec9310aa69149064b2f9de4e5a2395d3e3c3222b847093179516cc86",
+      "extracted_sha256": "5255c49646ae760d5572f4dd0345b08c8405f905427837b06786fdae384f23ea"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_structural_cp1.py",
+      "git_blob": "032aee2b0b28ae1eb167e8a40aeaf4df737c979e",
+      "destination": "tests/reference/agent/test_structural_cp1.py",
+      "source_sha256": "c8ec9bf959fc4cb0a65eaaebf0bf503d864dca5dc376f635ed8973e2a6613954",
+      "extracted_sha256": "c65af7eb54c81462f05c91c565caedf7bbb50fcb7d0fd4e21a2545602fa63ec8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_structural_cp2.py",
+      "git_blob": "7f91f6278bce579cbfccf30480535efdc54a66db",
+      "destination": "tests/reference/agent/test_structural_cp2.py",
+      "source_sha256": "3fbb344c53748d1b3dfbc3f590ff2766448761506a9e9393c5e094fbf831c3a3",
+      "extracted_sha256": "a6664dd83f3908ab13b48b15b445e4a87cf2b4a89c453168216d205bdfd0c5d9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_structural_cp3.py",
+      "git_blob": "72d46234c202d6bc46ee16fe46a79831de8a3972",
+      "destination": "tests/reference/agent/test_structural_cp3.py",
+      "source_sha256": "91933a596902218b194cbc8f872b3007219530ea624cb338709e8bb0582d433e",
+      "extracted_sha256": "a06cb06e3f88c43c73556c321ab10b4d49e8d54a9db6d876f5777476b63ff73b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_system_prompts.py",
+      "git_blob": "6d9e05d6b0d653024d20bcdb0cc4236e805068ed",
+      "destination": "tests/reference/agent/test_system_prompts.py",
+      "source_sha256": "8e0fddf536302323cab2e1f89e2f29657eb66366120cec0e103254f0cb3edf35",
+      "extracted_sha256": "03b3e167b89b1887120bad7167156e46d44a3f830a5372c8610611e456baa7e1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/agent/test_three_way_verdict.py",
+      "git_blob": "dcb9ae04615ea5d0d15f2f9a5684e50de33b4bb8",
+      "destination": "tests/reference/agent/test_three_way_verdict.py",
+      "source_sha256": "43339b7118e98c61b1d5696c09cb3d60679eec8e8e933472ce5948886ee44077",
+      "extracted_sha256": "1ee03b3bc405774487419dc671bb311e14181bba93986f8f5b4df2e95fb6cf58"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/bt/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_conversation_format.py",
+      "git_blob": "a76542e7e92b43fe07e7389d8c4727db882a0e00",
+      "destination": "tests/reference/bt/test_conversation_format.py",
+      "source_sha256": "4005c7644e9eb79bf22c88e65ff6f9cf9d3574803ca439137cabc374a50a141d",
+      "extracted_sha256": "435412448f0ab9098e735e6fafa0ca72009dc0a9112bcfed61bcf2b9bc4adabd"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_execute_skill_arrival_status.py",
+      "git_blob": "eb6c0133946f4a9ced5c6ed1dfb843b76a02882a",
+      "destination": "tests/reference/bt/test_execute_skill_arrival_status.py",
+      "source_sha256": "a42207de362d978b300a5ae9106ac4751e6014ca3907112540f8d10322bdde19",
+      "extracted_sha256": "b792125672e9e7afe8f9c1ab0429d09195598e7f8d6307a2b5cc9d99001ed0f6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_execute_skill_completion_bypass.py",
+      "git_blob": "f984a66012dc324aae62ac8b556e736db7a48f02",
+      "destination": "tests/reference/bt/test_execute_skill_completion_bypass.py",
+      "source_sha256": "818b22046a8ab595db6e989e97d6fbb3cdd7adfb49c1a2e3055b79f7123180ae",
+      "extracted_sha256": "ea3b6963990368afeb4132e4dcb83ae7f91bd159f09b53af84781e708af2b0eb"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_execute_skill_flat.py",
+      "git_blob": "1f1c94b1f2dfcfbaef14e6114f80df5c15d7c6b8",
+      "destination": "tests/reference/bt/test_execute_skill_flat.py",
+      "source_sha256": "8d2a78a1434c0d48fc0325f62df2543831399c0dcb1491aa0aacb9b4fe987d27",
+      "extracted_sha256": "86ec9ab559ceee01e553df889e52a0d3e57fee1aa921a93dae97cf5026ba70c6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_execute_skill_memoized.py",
+      "git_blob": "b355498129e038efc17df533f1acc354a874322b",
+      "destination": "tests/reference/bt/test_execute_skill_memoized.py",
+      "source_sha256": "a8c4de627ddd46f8baafbf24d6bbfe58b810250a6480422b38908b5aa0e1e977",
+      "extracted_sha256": "f04c6453d547015f4a4910ae541fb83e3046753cdb40fff507fff9bf4ead6c68"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_execute_skill_press_status.py",
+      "git_blob": "af7c4755c2027b25b9665b2c573b7e9a12fa6b05",
+      "destination": "tests/reference/bt/test_execute_skill_press_status.py",
+      "source_sha256": "833b66ae5927f79febad696f147ac0144872ef7fe18092bc571e477cd1ec3125",
+      "extracted_sha256": "8cd8b3d0e1a7ebc5158c582997c99111dbf27632e4a891b0fd6ecb9901f1bd86"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_profile_replay.py",
+      "git_blob": "e401b54f943dda1d2cb2eb9ef76c50bd95464210",
+      "destination": "tests/reference/bt/test_profile_replay.py",
+      "source_sha256": "4a5a1e2f5202448bb45ccd8c2ba4ea501c7669757f5fe0c2e05d1213fd7419d9",
+      "extracted_sha256": "67582098e5c6a2e3ef0bec694b82753dc7806f024c006dba644a88c44f9afbd6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/bt/test_skill_call_id_linkage.py",
+      "git_blob": "bf5647e97df8c64c4d83027393d01c17861efa78",
+      "destination": "tests/reference/bt/test_skill_call_id_linkage.py",
+      "source_sha256": "2cb74838732da49cf456909d2bf517b7ab89f8e4b968fef799afa07b81688594",
+      "extracted_sha256": "b5f926ddc1325b2098f833a94fa442ad8c5a8640906bfef085d15bbb27b10c1d"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/fixtures/profiles/synthetic_episode.json",
+      "git_blob": "ad37f219c702069b4baf363b612e9e4782aa5e43",
+      "destination": "tests/reference/fixtures/profiles/synthetic_episode.json",
+      "source_sha256": "3f5ad048628b65400319333f1ed51a3a5e883995be323fc7d03a3cab7d1539b1",
+      "extracted_sha256": "3f5ad048628b65400319333f1ed51a3a5e883995be323fc7d03a3cab7d1539b1"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/model/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/test_backend_episode_context.py",
+      "git_blob": "b96541ca6de520e3ab148fee3d5c4c752ff7d707",
+      "destination": "tests/reference/model/test_backend_episode_context.py",
+      "source_sha256": "d71b6acd08bfee2a62d48b51b681f6ca6eba344486593e60351037f6bdced882",
+      "extracted_sha256": "9e99e284f44604fc61d7e1f8dea9b07d205338c53d51179b92fb052dc88d2877"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/test_backend_exchange_recording.py",
+      "git_blob": "7440509f8c17f8f3cd8ddfa04abb61b06285bd15",
+      "destination": "tests/reference/model/test_backend_exchange_recording.py",
+      "source_sha256": "b6b98387ae21cbe7f253154b76e25695ddf77bc171aec95e10eda007422bb360",
+      "extracted_sha256": "3732ce2ebd2a2ac4ed48ab8eee17e3adcdeb6b872edd505820d7233d5ea08b52"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/test_backend_identity.py",
+      "git_blob": "4bd50ed45f5479b35b67f51800abc5b7bf716065",
+      "destination": "tests/reference/model/test_backend_identity.py",
+      "source_sha256": "759f0f9d20ccdb4c10a08fe09a91a4e7632f8f49bf09b2bbf095a7895d65dd89",
+      "extracted_sha256": "7f845e26fcd999ca20bccbc753dfa9b1bc19054b3f8da677560c688f8f2320b9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/test_backend_structured.py",
+      "git_blob": "83aced3554fe073c38bfa75cd0ee0f8447b23738",
+      "destination": "tests/reference/model/test_backend_structured.py",
+      "source_sha256": "da855a1f7072881e93b0418b600c20c73400099f42a195ab47552ad17b714123",
+      "extracted_sha256": "ac53bd298ad03b926ff81d284f62e9cb9f4155fdad2cdcd3928c02df5ebf05e7"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/model/test_exchange_recorder.py",
+      "git_blob": "2252ddbf04818df44d7bd6529233b22082f83273",
+      "destination": "tests/reference/model/test_exchange_recorder.py",
+      "source_sha256": "07b565aafd9513da67de6a9682a884d26ebce89a3201113455d2147503d5c5c6",
+      "extracted_sha256": "f61f32cef359132b67dc77ba0ee31d1895bee228693ef465c545c1f29e8c94a0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/observability/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/observability/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/observability/test_event_sink.py",
+      "git_blob": "be3b60fe0ab054a95533c05372309f4f0ae200d9",
+      "destination": "tests/reference/observability/test_event_sink.py",
+      "source_sha256": "5c8fcafa6adf47211df8d4a5c78d4e25b518a328e27a956798def186d89ab6ec",
+      "extracted_sha256": "a4e890747f6e53671c6f2de3b93a20c994bf27d4242038dce0e1a2f7fd7c553b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/observability/test_snapshot.py",
+      "git_blob": "6455ff3a2f10a7e9c29d61dd9b58a842b0208d62",
+      "destination": "tests/reference/observability/test_snapshot.py",
+      "source_sha256": "93198bf754c34aa8c2d15c6af374506931a263ba92910e78b46d63bb31d3ffc6",
+      "extracted_sha256": "d77afc6a5031ce4e7beec7fed38e4e461f02fda9dd248d402ebbbf92e7382e1b"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/observability/test_timeline_recorder.py",
+      "git_blob": "595c3ac69fc05f2f3055df127be83225805b2528",
+      "destination": "tests/reference/observability/test_timeline_recorder.py",
+      "source_sha256": "2d0065cbe30aeeaf15d3ed9f65224ec59c0bb39a0dc110f13ddcb2bc52a2205e",
+      "extracted_sha256": "8719cbc29b205e54aa5493d64aaba429ef6cea278cb6dc2980aa042e9efd6ebe"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/__init__.py",
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "destination": "tests/reference/skills/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "extracted_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_failed_leaf_attribution.py",
+      "git_blob": "2bc11384a21bd079fd54b8eb573e8aaedfb52308",
+      "destination": "tests/reference/skills/test_failed_leaf_attribution.py",
+      "source_sha256": "58f133134c72a28ddbab4dd63dd1dab13d20a6b5eb20e1b45e0177130bc333cf",
+      "extracted_sha256": "b8471fb3db52348a85c74b97e188dcefd5e233892f983c0844a4f16f7b5ecf70"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_protocol_crash_guard.py",
+      "git_blob": "5dccb19187e63d25b851955697f19a7ffbb59564",
+      "destination": "tests/reference/skills/test_protocol_crash_guard.py",
+      "source_sha256": "08982fad4e4509332dba54f9da75e886726672b3a857bb29b0f417cd15634170",
+      "extracted_sha256": "641800c6fe74a8dc2c4977a87b30a532d550938cb7af3e1bb7c5f42ea82044d0"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_publish_results.py",
+      "git_blob": "28709fb6fb68a67063c5a379b2def6678235a20b",
+      "destination": "tests/reference/skills/test_publish_results.py",
+      "source_sha256": "7351cba512e16f9969a913f6605060fe7e6da71b57abd843566459bf6de262b8",
+      "extracted_sha256": "3dd6c88a192fdc4352dcd57199b8835d31c8f9bec44bf16e5463ef3bcb0ef728"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_registry_partition.py",
+      "git_blob": "87d0691b8c9ecabbcaed6d4856ec28bcf77c13e1",
+      "destination": "tests/reference/skills/test_registry_partition.py",
+      "source_sha256": "af528d3b05fcf4d4909ec5d2ba87b65a5978ad45a5ad2a7253ec177f21ffc380",
+      "extracted_sha256": "638cce6a92bc77fa04570b93f0d8add723c17c43cbb876742fe2e18ec6fa74b8"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_pycore/tests/skills/test_safeguard.py",
+      "git_blob": "618365bcb6c2b237196e51ac7525c5cf03b92c15",
+      "destination": "tests/reference/skills/test_safeguard.py",
+      "source_sha256": "76d6d6725cc27e2779597f4882f1a73b7645eb939b0d34fb7b1dbf789ad963d9",
+      "extracted_sha256": "71942a73a8560ac10e6492291d102a450b3763f7d62175c684df80ee281a598a"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_textrung/src/lam_v2_textrung/bt_skills/report.py",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/report_skill.py",
+      "transform": "module-prefix-only",
+      "source_sha256": "b555fc012b0e20295c34588aae95afc54b8e2c3c9d080958535c793411c90dfb",
+      "extracted_sha256": "1e3c250755f37778d9826dce91f2f0e7ce5496f96976bf0e8c8c73080a6d2ba9"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_textrung/src/lam_v2_textrung/bt_skills/_helpers.py",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/_helpers.py",
+      "transform": "module-prefix-only",
+      "source_sha256": "abef5cb0ac4e68bcdfeaa746cf44b06986e7e24c2f7d0433f2e30ade9e0cae4a",
+      "extracted_sha256": "78ea1a091c0f7245713a66ec7845ea39c9ce3ae9e0a7f8a92b2fa0ba91e7c7d6"
+    },
+    {
+      "source": "ros/ros2_ws/src/lam_v2/lam_v2_tiamat/src/lam_v2_tiamat/sim_experiment.py",
+      "destination": "packages/bt-agent/src/bt_agent/_engine/episode_bridge.py",
+      "transform": "extract RosClaimBridge class verbatim (no ROS imports)",
+      "source_sha256": "9e6f5012612c496073a5303be5a37f709428e16461a48abe0204daeb32b9081f",
+      "extracted_sha256": "c47e5270e0f132d1d32a2464c7ce569e8d9d4a5fb25c3b5197ab66db3c7cdad1"
+    }
+  ]
+}
